@@ -2116,3 +2116,42 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"done")
                 else:
+                    wait["Protectgr"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect QR On")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Qr off","qr off"]:
+              if msg.from_ in admin:
+                if wait["Protectgr"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect QR Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectgr"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect QR Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Contact On","Contact on","contact on"]:
+              if msg.from_ in admin:
+                if wait["contact"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cek Mid Lewat Share Kontak On")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["contact"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cek Mid Lewat Share Kontak On")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Contact Off","Contact off","contact off"]:
+              if msg.from_ in admin:
+                if wait["contact"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cek Mid Lewat Share Kontak Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
