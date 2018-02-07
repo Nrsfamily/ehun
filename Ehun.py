@@ -2391,3 +2391,36 @@ def bot(op):
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,"message changed")
                 else:
+                    cl.sendText(msg.to,"doneã€‚")
+            elif msg.text in ["Message","è‡ªå‹•è¿½åŠ å•�å€™èªžç¢ºèª�"]:
+                if wait["lang"] == "JP":
+                    cl.sendText(msg.to,"message change to\n\n" + wait["message"])
+                else:
+                    cl.sendText(msg.to,"The automatic appending information is set as followsã€‚\n\n" + wait["message"])
+            elif "Comment:" in msg.text:
+                c = msg.text.replace("Comment:","")
+                if c in [""," ","\n",None]:
+                    cl.sendText(msg.to,"message changed")
+                else:
+                    wait["comment"] = c
+                    cl.sendText(msg.to,"changed\n\n" + c)
+            elif "Add comment:" in msg.text:
+                c = msg.text.replace("Add comment:","")
+                if c in [""," ","\n",None]:
+                    cl.sendText(msg.to,"String that can not be changed")
+                else:
+                    wait["comment"] = c
+                    cl.sendText(msg.to,"changed\n\n" + c)
+#---------------------Sc invite owner ke group------
+            elif "/invitemeto: " in msg.text:
+              if msg.from_ in owner:
+                gid = msg.text.replace("/invitemeto: ","")
+                if gid == "":
+                  cl.sendText(msg.to,"Invalid group id")
+                else:
+                  try:
+                    cl.findAndAddContactsByMid(msg.from_)
+                    cl.inviteIntoGroup(gid,[msg.from_])
+                  except:
+                    cl.sendText(msg.to,"Mungkin saya tidak di dalaam grup itu")
+#--------===---====--------------
