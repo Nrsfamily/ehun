@@ -471,3 +471,30 @@ def bot(op):
               ks.acceptGroupInvitationByTicket(msg.to,Ticket)
               time.sleep(0.01)
      time.sleep(0.01)
+              ko.acceptGroupInvitationByTicket(msg.to,Ticket)
+              time.sleep(0.01)
+              ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+              time.sleep(0.01)
+              ku.acceptGroupInvitationByTicket(msg.to,Ticket)
+              time.sleep(0.01)
+              k1.acceptGroupInvitationByTicket(msg.to,Ticket)
+              time.sleep(0.01)                        
+              G = cl.getGroup(msg.to)
+              ginfo = cl.getGroup(msg.to)
+              G.preventJoinByTicket = True
+              cl.updateGroup(G)
+              G.preventJoinByTicket(G)
+              random.choice(KAC).updateGroup(G)
+              
+        if op.type == 19: 
+          if op.param3 in admin: #Kalo Admin ke Kick
+            if op.param2 in Bots:
+              pass
+            if op.param2 in owner:
+              pass
+            else:
+                random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                cl.inviteIntoGroup(op.param1,[op.param3])
+              
+        if op.type == 19:
+          try:
