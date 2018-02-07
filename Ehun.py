@@ -2699,3 +2699,32 @@ def bot(op):
 
             elif msg.text in ["Zorro join"]:
               if msg.from_ in admin:
+                  x = cl.getGroup(msg.to)
+                  x.preventJoinByTicket = False
+                  cl.updateGroup(x)
+                  invsend = 0
+                  Ti = cl.reissueGroupTicket(msg.to)
+                  kk.acceptGroupInvitationByTicket(msg.to,Ti)
+                  G = cl.getGroup(msg.to)
+                  G.preventJoinByTicket = True
+                  cl.updateGroup(G)
+                  Ticket = cl.reissueGroupTicket(msg.to)
+                  
+            elif msg.text in ["Sanji Join"]:
+              if msg.from_ in admin:
+                  X = cl.getGroup(msg.to)
+                  X.preventJoinByTicket = False
+                  cl.updateGroup(X)
+                  invsend = 0
+                  Ti = cl.reissueGroupTicket(msg.to)
+                  kc.acceptGroupInvitationByTicket(msg.to,Ti)
+                  G = cl.getGroup(msg.to)
+                  G.preventJoinByTicket = True
+                  cl.updateGroup(G)
+                  Ticket = cl.reissueGroupTicket(msg.to)
+    #----------------------Fungsi Join Group Finish---------------#
+
+    #-------------Fungsi Leave Group Start---------------#
+            elif msg.text in ["Kabur all","One piece left","One Piece left"]:
+              if msg.from_ in admin:
+                if msg.toType == 2:
