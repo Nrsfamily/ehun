@@ -1947,3 +1947,35 @@ def bot(op):
                 ke.sendText(msg.to,Hmid)
                 ku.sendText(msg.to,Imid)
             elif "Luffy" == msg.text:
+              if msg.from_ in admin:
+                cl.sendText(msg.to,Smid)
+            elif "Zorro" == msg.text:
+              if msg.from_ in admin:
+                ki.sendText(msg.to,mid)
+            elif "Sanji" == msg.text:
+              if msg.from_ in admin:
+                kk.sendText(msg.to,Amid)
+            elif "Ussop" == msg.text:
+              if msg.from_ in admin:
+                kc.sendText(msg.to,Bmid)
+            elif msg.text in ["Wkwkwk","Wkwk","Wk","wkwkwk","wkwk","wk"]:
+                msg.contentType = 7
+                msg.text = None
+                msg.contentMetadata = {
+                                     "STKID": "100",
+                                     "STKPKGID": "1",
+                                     "STKVER": "100" }
+                cl.sendMessage(msg)
+                ki.sendMessage(msg)
+                kk.sendMessage(msg)
+            elif msg.text in ["Hehehe","Hehe","He","hehehe","hehe","he"]:
+                msg.contentType = 7
+                msg.text = None
+                msg.contentMetadata = {
+                                     "STKID": "10",
+                                     "STKPKGID": "1",
+                                     "STKVER": "100" }
+                ki.sendMessage(msg)
+                kk.sendMessage(msg)
+            elif msg.text in ["Galau"]:
+                msg.contentType = 7
