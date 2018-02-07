@@ -2667,3 +2667,35 @@ def bot(op):
                         ginfo = satpam.getGroup(msg.to)
                         G.preventJoinByTicket = True
                         satpam.updateGroup(G)
+                        print "Semua Sudah Lengkap"
+                        G.preventJoinByTicket(G)
+                        satpam.updateGroup(G)
+
+            elif msg.text in ["Koplak join"]:
+              if msg.form_ in admin:
+                  x = ki.getGroup(msg.to)
+                  x.preventJoinByTicket = False
+                  ki.updateGroup(x)
+                  invsend = 0
+                  Ti = ki.reissueGroupTicket(msg.to)
+                  cl.acceptGroupInvitationByTicket(msg.to,Ti)
+                  G = ki.getGroup(msg.to)
+                  G.preventJoinByTicket = True
+                  ki.updateGroup(G)
+                  Ticket = ki.reissueGroupTicket(msg.to)
+
+            elif msg.text in ["Luffy join"]:
+              if msg.from_ in admin:
+                  x = cl.getGroup(msg.to)
+                  x.preventJoinByTicket = False
+                  cl.updateGroup(x)
+                  invsend = 0
+                  Ti = cl.reissueGroupTicket(msg.to)
+                  ki.acceptGroupInvitationByTicket(msg.to,Ti)
+                  G = cl.getGroup(msg.to)
+                  G.preventJoinByTicket = True
+                  cl.updateGroup(G)
+                  Ticket = cl.reissueGroupTicket(msg.to)
+
+            elif msg.text in ["Zorro join"]:
+              if msg.from_ in admin:
