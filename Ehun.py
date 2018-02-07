@@ -1881,3 +1881,32 @@ def bot(op):
                     else:
                         kc.sendText(msg.to,"already close")
                 else:
+                    if wait["lang"] == "JP":
+                        kc.sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        kc.sendText(msg.to,"Not for use less than group")
+            elif "jointicket " in msg.text.lower():
+		rplace=msg.text.lower().replace("jointicket ")
+		if rplace == "on":
+			wait["atjointicket"]=True
+		elif rplace == "off":
+			wait["atjointicket"]=False
+		cl.sendText(msg.to,"Auto Join Group by Ticket is %s" % str(wait["atjointicket"]))
+            elif '/ti/g/' in msg.text.lower():
+		link_re = re.compile('(?:line\:\/|line\.me\/R)\/ti\/g\/([a-zA-Z0-9_-]+)?')
+		links = link_re.findall(msg.text)
+		n_links=[]
+		for l in links:
+			if l not in n_links:
+				n_links.append(l)
+		for ticket_id in n_links:
+			if wait["atjointicket"] == True:
+				group=cl.findGroupByTicket(ticket_id)
+				cl.acceptGroupInvitationByTicket(group.mid,ticket_id)
+				cl.sendText(msg.to,"Sukses join ke grup %s" % str(group.name))
+                     
+            elif "Info Group" == msg.text:
+              if msg.toType == 2:
+                if msg.from_ in admin:
+                  ginfo = cl.getGroup(msg.to)
+                  try:
