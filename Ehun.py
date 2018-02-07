@@ -2290,3 +2290,36 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"ç›¸å†Œæ²¡åœ¨ã€‚")
                 else:
+                    if wait["lang"] == "JP":
+                        mg = "The following is the target album"
+                    else:
+                        mg = "ä»¥ä¸‹æ˜¯å¯¹è±¡çš„ç›¸å†Œ"
+                    for y in album["result"]["items"]:
+                        if "photoCount" in y:
+                            mg += str(y["title"]) + ":" + str(y["photoCount"]) + "sheet\n"
+                        else:
+                            mg += str(y["title"]) + ":0sheet\n"
+                    cl.sendText(msg.to,mg)
+            elif "album " in msg.text:
+                gid = msg.text.replace("album ","")
+                album = cl.getAlbum(gid)
+                if album["result"]["items"] == []:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"There is no album")
+                    else:
+                        cl.sendText(msg.to,"ç›¸å†Œæ²¡åœ¨ã€‚")
+                else:
+                    if wait["lang"] == "JP":
+                        mg = "The following is the target album"
+                    else:
+                        mg = "ä»¥ä¸‹æ˜¯å¯¹è±¡çš„ç›¸å†Œ"
+                    for y in album["result"]["items"]:
+                        if "photoCount" in y:
+                            mg += str(y["title"]) + ":" + str(y["photoCount"]) + "sheet\n"
+                        else:
+                            mg += str(y["title"]) + ":0sheet\n"
+            elif "album remove " in msg.text:
+                gid = msg.text.replace("album remove ","")
+                albums = cl.getAlbum(gid)["result"]["items"]
+                i = 0
+                if albums != []:
