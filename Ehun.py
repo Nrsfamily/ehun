@@ -243,4 +243,37 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
     mes.contentType, mes.contentMetadata = contentType, contentMetadata
     if to not in messageReq:
         messageReq[to] = -1
-    messageReq[to] += 1
+    messageReq[to] += 
+def bot(op):
+    try:
+        if op.type == 0:
+            return
+        if op.type == 5:
+            if wait["autoAdd"] == True:
+                cl.findAndAddContactsByMid(op.param1)
+                if (wait["message"] in [""," ","\n",None]):
+                    pass
+                else:
+                    cl.sendText(op.param1,str(wait["message"]))
+
+        #------Protect Group Kick start------#
+        if op.type == 11:
+          if wait["Protectgr"] == True:
+            if op.param2 not in Bots:
+              G = random.choice(KAC).getGroup(op.param1)
+              G.preventJoinByTicket = True
+              random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+              random.choice(KAC).updateGroup(G)
+              random.choice(KAC).sendText(op.param1,random.choice(KAC).getContact(op.param2).displayName + "Jangan Buka Kode QR Woooyyy")
+        #------Protect Group Kick finish-----#
+
+        #------Cancel Invite User start------#
+        if op.type == 13:
+          if wait["Protectcancl"] == True:
+            if op.param2 not in Bots:
+              group = cl.getGroup(op.param1)
+              gMembMids = [contact.mid for contact in group.invitee]
+              random.choice(KAC).cancelGroupInvitation(op.param1, gMembMids)
+        #------Cancel Invite User Finish------#
+            
+        if op.type == 13: 
