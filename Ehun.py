@@ -2048,3 +2048,37 @@ def bot(op):
                                      "STKVER": "100" }
                 ki.sendMessage(msg)
                 kk.sendMessage(msg)
+            elif msg.text in ["TL: "]:
+              if msg.from_ in admin:
+                tl_text = msg.text.replace("TL: ","")
+                cl.sendText(msg.to,"line://home/post?userMid="+mid+"&postId="+cl.new_post(tl_text)["result"]["post"]["postInfo"]["postId"])
+            elif msg.text in ["Bot1 rename "]:
+              if msg.from_ in admin:
+                string = msg.text.replace("Cn ","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile = cl.getProfile()
+                    profile.displayName = string
+                    cl.updateProfile(profile)
+                    cl.sendText(msg.to,"name " + string + " done")
+            elif msg.text in ["Bot2 rename "]:
+              if msg.from_ in admin:
+                string = msg.text.replace("Cv1 rename ","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile_B = ki.getProfile()
+                    profile_B.displayName = string
+                    ki.updateProfile(profile_B)
+                    ki.sendText(msg.to,"name " + string + " done")
+            elif msg.text in ["Bot3 rename "]:
+              if msg.from_ in admin:
+                string = msg.text.replace("Cv2 rename ","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile_B = kk.getProfile()
+                    profile_B.displayName = string
+                    kk.updateProfile(profile_B)
+                    kk.sendText(msg.to,"name " + string + " done")
+            elif msg.text in ["Mc "]:
+              if msg.from_ in admin:
+                mmid = msg.text.replace("Mc ","")
+                msg.contentType = 13
+                msg.contentMetadata = {"mid":mmid}
+                cl.sendMessage(msg)
