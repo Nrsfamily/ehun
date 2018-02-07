@@ -2235,3 +2235,29 @@ def bot(op):
                         cl.sendText(msg.to,"already")
             elif msg.text in ["å…±æœ‰:ã‚ªãƒ³","Share on","Share on"]:
               if msg.from_ in admin:
+                if wait["timeline"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already on")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["timeline"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"done")
+                    else:
+                        cl.sendText(msg.to,"è¦�äº†å¼€ã€‚")
+            elif msg.text in ["å…±æœ‰:ã‚ªãƒ•","Share off","Share off"]:
+              if msg.from_ in admin:
+                if wait["timeline"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already off")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["timeline"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"done")
+                    else:
+                        cl.sendText(msg.to,"è¦�äº†å…³æ–­ã€‚")
+            elif msg.text in ["set"]:
+              if msg.from_ in admin:
