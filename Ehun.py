@@ -2763,3 +2763,34 @@ def bot(op):
                     except:
                         pass
                       
+            elif msg.text in ["Bye zorro"]:
+              if msg.from_ in owner:
+                if msg.toType == 2:
+                    ginfo = cl.getGroup(msg.to)
+                    try:
+                        ki.leaveGroup(msg.to)
+                    except:
+                        pass
+            elif msg.text in ["Bye sanji"]:
+              if msg.from_ in owner:
+                if msg.toType == 2:
+                    ginfo = cl.getGroup(msg.to)
+                    try:
+                        kk.leaveGroup(msg.to)
+                    except:
+                        pass
+            elif msg.text in ["Bye Ussop"]:
+              if msg.from_ in owner:
+                if msg.toType == 2:
+                    ginfo = cl.getGroup(msg.to)
+                    try:
+                        kc.leaveGroup(msg.to)
+                    except:
+                        pass
+            elif msg.text in ["Ojo koyo kuwe1"]:
+                if msg.toType == 2:
+                    ginfo = cl.getGroup(msg.to)
+                    try:
+                        ki.leaveGroup(msg.to)
+                    except:
+                        pass
