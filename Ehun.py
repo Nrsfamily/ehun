@@ -179,3 +179,48 @@ wait = {
 ≫ ONE PIECE BOT PROTECT ≪
 
 Ready:
+
+≫ bot protect ≪
+≫ SelfBot ≪
+
+
+ṡȗƿƿȏяṭєԀ ɞʏ:
+  
+☆ FS3I FAMILY ☆
+☆ ONE PIECE BOT PROTECT ☆
+☆ SMULE VOICE FAMILY ☆
+☆ FOUNDER COMMUNITY ☆
+☆ ASOSIATION FOUNDER INDONESIA ☆
+☆ Generasi Kickers Killers ☆
+
+
+Minat? Silahkan PM!
+Idline: http://line.me/ti/p/~alrahmantoganteng""",
+    "lang":"JP",
+    "comment":"Thanks for add me",
+    "commentOn":False,
+    "commentBlack":{},
+    "wblack":False,
+    "dblack":False,
+    "clock":False,
+    "cName":"™1™ ",
+    "cName2":"™2™ ",
+    "cName3":"™3™ ",
+    "cName4":"™4™ ",
+    "cName5":"™5™ ",
+    "cName6":"™Franky™ ",
+    "cName7":"™Brook™ ",
+    "cName8":"™Nami™ ",
+    "cName9":"™Robin™ ",
+    "cName10":"™Rebecca™ ",
+    "cName11":"",
+    "cName12":"™ONE PIECE BOT™ ",
+    "blacklist":{},
+    "wblacklist":False,
+    "dblacklist":False,
+    "Protectgr":True,
+    #"Protectjoin":True, # Ga Kepake(Yang Gabung langsung di kick :D) Udah  Udah ada Protect Cancell
+    "Protectcancl":True,
+    "protectionOn":True,
+    "atjointicket":True
+    }
