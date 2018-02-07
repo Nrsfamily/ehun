@@ -1247,3 +1247,28 @@ def bot(op):
                     cl.sendText(msg.to,Sett)
             elif ("Gn " in msg.text):
                 if msg.toType == 2:
+                    X = cl.getGroup(msg.to)
+                    X.name = msg.text.replace("Gn ","")
+                    cl.updateGroup(X)
+                else:
+                    cl.sendText(msg.to,"It can't be used besides the group.")
+            elif ("Luffy gn " in msg.text):
+                if msg.toType == 2:
+                    X = cl.getGroup(msg.to)
+                    X.name = msg.text.replace("Cv1 gn ","")
+                    ki.updateGroup(X)
+                else:
+                    ki.sendText(msg.to,"It can't be used besides the group.")
+            elif ("Zorro gn " in msg.text):
+                if msg.toType == 2:
+                    X = cl.getGroup(msg.to)
+                    X.name = msg.text.replace("Cv2 gn ","")
+                    kk.updateGroup(X)
+                else:
+                    kk.sendText(msg.to,"It can't be used besides the group.")
+            elif ("Sanji gn " in msg.text):
+                if msg.toType == 2:
+                    X = cl.getGroup(msg.to)
+                    X.name = msg.text.replace("Cv3 gn ","")
+                    kc.updateGroup(X)
+                else:
