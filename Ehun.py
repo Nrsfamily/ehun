@@ -2525,3 +2525,43 @@ def bot(op):
                 if wait["clock"] == True:
                     kc.sendText(msg.to,"Bot 4 jam on")
                 else:
+                    wait["clock"] = True
+                    now2 = datetime.now()
+                    nowT = datetime.strftime(now2,"(%H:%M)")
+                    profile = kc.getProfile()
+                    profile.displayName = wait["cName4"] + nowT
+                    kc.updateProfile(profile)
+                    kc.sendText(msg.to,"Jam Selalu On")
+            elif msg.text in ["Jam off"]:
+              if msg.from_ in admin:
+                if wait["clock"] == False:
+                    kc.sendText(msg.to,"Bot 4 jam off")
+                else:
+                    wait["clock"] = False
+                    kc.sendText(msg.to,"Jam Sedang Off")
+        #-------------Fungsi Jam on/off Finish-------------------#           
+         
+        #-------------Fungsi Change Clock Start------------------#
+            elif msg.text in ["Change clock"]:
+                n = msg.text.replace("Change clock","00:00")
+                if len(n.decode("utf-8")) > 13:
+                    cl.sendText(msg.to,"changed")
+                else:
+                    wait["cName"] = n
+                    cl.sendText(msg.to,"changed to\n\n" + n)
+        #-------------Fungsi Change Clock Finish-----------------#           
+        
+         #-------------Fungsi Jam Update Start---------------------#            
+            elif msg.text in ["Jam Update"]:
+                if wait["clock"] == True:
+                    now2 = datetime.now()
+                    nowT = datetime.strftime(now2,"(%H:%M)")
+                    profile = kc.getProfile()
+                    profile.displayName = wait["cName4"] + nowT
+                    kc.updateProfile(profile)
+                    kc.sendText(msg.to,"Sukses update")
+                else:
+                    kc.sendText(msg.to,"Aktifkan jam terlebih dulu")
+        #-------------Fungsi Jam Update Finish-------------------#
+
+            elif msg.text == "Cctv":
