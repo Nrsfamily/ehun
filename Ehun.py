@@ -1449,3 +1449,35 @@ def bot(op):
                 else:
                    for target in targets:
                         try:
+                            owner.remove(target)
+                            cl.sendText(msg.to,"Owner Dihapus")
+                        except:
+                            pass
+                print "[Command]Staff remove executed"
+              else:
+                cl.sendText(msg.to,"Command denied.")
+                cl.sendText(msg.to,"Owner permission required.")
+                
+            elif msg.text in ["Ownerlist","ownerlist"]:
+              if owner == []:
+                  cl.sendText(msg.to,"The stafflist is empty")
+              else:
+                  cl.sendText(msg.to,"Tunggu...")
+                  mc = "||Owner One Piece Bot||\n=====================\n"
+                  for mi_d in owner:
+                      mc += "••>" +cl.getContact(mi_d).displayName + "\n"
+                  cl.sendText(msg.to,mc)
+                  print "[Command]Stafflist executed"
+    #--------------------------------------    
+    #-------------- Add Friends ------------
+            elif "Bot Add @" in msg.text:
+              if msg.toType == 2:
+                if msg.from_ in owner:
+                  print "[Command]Add executing"
+                  _name = msg.text.replace("Bot Add @","")
+                  _nametarget = _name.rstrip('  ')
+                  gs = cl.getGroup(msg.to)
+                  gs = ki.getGroup(msg.to)
+                  gs = kk.getGroup(msg.to)
+                  gs = kc.getGroup(msg.to)
+                  gs = ks.getGroup(msg.to)
