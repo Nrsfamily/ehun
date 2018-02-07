@@ -1272,3 +1272,32 @@ def bot(op):
                     X.name = msg.text.replace("Cv3 gn ","")
                     kc.updateGroup(X)
                 else:
+                    kc.sendText(msg.to,"It can't be used besides the group.")
+            elif "Kick " in msg.text:
+              if msg.from_ in admin:
+                midd = msg.text.replace("Kick ","")
+                random.choice(KAC).kickoutFromGroup(msg.to,[midd])
+            elif "Luffy kick " in msg.text:
+              if msg.from_ in admin:
+                midd = msg.text.replace("_second kick ","")
+                ki.kickoutFromGroup(msg.to,[midd])
+            elif "Zorro kick " in msg.text:
+              if msg.from_ in admin:
+                midd = msg.text.replace("_third kick ","")
+                kk.kickoutFromGroup(msg.to,[midd])
+            elif "Sanji kick " in msg.text:
+              if msg.from_ in admin:
+                midd = msg.text.replace("_fourth kick ","")
+                kc.kickoutFromGroup(msg.to,[midd])
+            elif "Invite " in msg.text:
+              if msg.from_ in admin:
+                midd = msg.text.replace("Invite ","")
+                cl.findAndAddContactsByMid(midd)
+                cl.inviteIntoGroup(msg.to,[midd])
+            elif "Luffy invite " in msg.text:
+              if msg.from_ in admin:
+                midd = msg.text.replace("sinvite ","")
+                ki.findAndAddContactsByMid(midd)
+                ki.inviteIntoGroup(msg.to,[midd])
+            elif "Zorro invite " in msg.text:
+              if msg.from_ in admin:
