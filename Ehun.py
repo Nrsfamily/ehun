@@ -1218,3 +1218,32 @@ def bot(op):
                             cu = cl.channel.getCover(msg.contentMetadata["mid"])
                         except:
                             cu = ""
+                        cl.sendText(msg.to,"[displayName]:\n" + contact.displayName + "\n[mid]:\n" + msg.contentMetadata["mid"] + "\n[statusMessage]:\n" + contact.statusMessage + "\n[pictureStatus]:\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\n[coverURL]:\n" + str(cu))
+            elif msg.contentType == 16:
+                if wait["timeline"] == True:
+                    msg.contentType = 0
+                    if wait["lang"] == "JP":
+                        msg.text = "post URL\n" + msg.contentMetadata["postEndUrl"]
+                    else:
+                        msg.text = "URLâ†’\n" + msg.contentMetadata["postEndUrl"]
+                    cl.sendText(msg.to,msg.text)
+            elif msg.text is None:
+                return
+            elif msg.text in ["Help"]:
+                if wait["lang"] == "JP":
+                    cl.sendText(msg.to,helpMessage)
+                else:
+                    cl.sendText(msg.to,helpt)
+            elif msg.text in ["Keyword"]:
+                if wait["lang"] == "JP":
+                    cl.sendText(msg.to,keyword)
+                else:
+                    cl.sendText(msg.to,helpt)                                        
+            elif msg.text in ["Admin menu"]:
+              if msg.from_ in admin:
+                if wait["lang"] == "JP":
+                    cl.sendText(msg.to,Setgroup)
+                else:
+                    cl.sendText(msg.to,Sett)
+            elif ("Gn " in msg.text):
+                if msg.toType == 2:
