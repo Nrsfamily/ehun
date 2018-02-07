@@ -1481,3 +1481,36 @@ def bot(op):
                   gs = kk.getGroup(msg.to)
                   gs = kc.getGroup(msg.to)
                   gs = ks.getGroup(msg.to)
+                  gs = ka.getGroup(msg.to)
+                  gs = kb.getGroup(msg.to)
+                  gs = ke.getGroup(msg.to)
+                  gs = ko.getGroup(msg.to)
+                  gs = ku.getGroup(msg.to)
+                  targets = []
+                  for g in gs.members:
+                    if _nametarget == g.displayName:
+                      targets.append(g.mid)
+                  if targets == []:
+                    random.choice(KAC).sendText(msg.to,"Contact not found")
+                  else:
+                    for target in targets:
+                      try:
+                        cl.findAndAddContactsByMid(target)
+                        ki.findAndAddContactsByMid(target)
+                        kk.findAndAddContactsByMid(target)
+                        kc.findAndAddContactsByMid(target)
+                        ks.findAndAddContactsByMid(target)
+                        ka.findAndAddContactsByMid(target)
+                        kb.findAndAddContactsByMid(target)
+                        ko.findAndAddContactsByMid(target)
+                        ke.findAndAddContactsByMid(target)
+                        ku.findAndAddContactsByMid(target)
+                      except:
+                        cl.sendText(msg.to,"Error")
+              else:
+                cl.sendText(msg.to,"Perintah Ditolak")
+                cl.sendText(msg.to,"Perintah ini Hanya Untuk Owner Kami")
+                  
+    #-------------=SC AllBio=---------------- Ganti Bio Semua Bot Format => Allbio: SUKA SUKA KALIAN :D
+            elif "Allbio:" in msg.text:
+              if msg.from_ in owner:
