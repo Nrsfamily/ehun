@@ -1845,3 +1845,39 @@ def bot(op):
                         random.choice(KAC).sendText(msg.to,"Not for use less than group")
             elif msg.text in ["Luffy close qr","Luffy tutup qr"]:
                 if msg.toType == 2:
+                    X = ki.getGroup(msg.to)
+                    X.preventJoinByTicket = True
+                    ki.updateGroup(X)
+                    if wait["lang"] == "JP":
+                        ki.sendText(msg.to,"Done Plak")
+                    else:
+                        ki.sendText(msg.to,"already close")
+                else:
+                    if wait["lang"] == "JP":
+                        ki.sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        ki.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Zorro tutup qr","Zorro close qr"]:
+                if msg.toType == 2:
+                    X = kk.getGroup(msg.to)
+                    X.preventJoinByTicket = True
+                    kk.updateGroup(X)
+                    if wait["lang"] == "JP":
+                        kk.sendText(msg.to,"Done Plak")
+                    else:
+                        kk.sendText(msg.to,"already close")
+                else:
+                    if wait["lang"] == "JP":
+                        kk.sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        kk.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Sanji tutup qr","Sanji close qr"]:
+                if msg.toType == 2:
+                    X = kc.getGroup(msg.to)
+                    X.preventJoinByTicket = True
+                    kc.updateGroup(X)
+                    if wait["lang"] == "JP":
+                        kc.sendText(msg.to,"Done Plak")
+                    else:
+                        kc.sendText(msg.to,"already close")
+                else:
