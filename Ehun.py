@@ -1979,3 +1979,39 @@ def bot(op):
                 kk.sendMessage(msg)
             elif msg.text in ["Galau"]:
                 msg.contentType = 7
+                msg.text = None
+                msg.contentMetadata = {
+                                     "STKID": "9",
+                                     "STKPKGID": "1",
+                                     "STKVER": "100" }
+                ki.sendMessage(msg)
+                kk.sendMessage(msg)
+            elif msg.text in ["You"]:
+                msg.contentType = 7
+                msg.text = None
+                msg.contentMetadata = {
+                                     "STKID": "7",
+                                     "STKPKGID": "1",
+                                     "STKVER": "100" }
+                ki.sendMessage(msg)
+                kk.sendMessage(msg)
+            elif msg.text in ["Hadeuh"]:
+                msg.contentType = 7
+                msg.text = None
+                msg.contentMetadata = {
+                                     "STKID": "6",
+                                     "STKPKGID": "1",
+                                     "STKVER": "100" }
+                ki.sendMessage(msg)
+                kk.sendMessage(msg)
+            elif msg.text in ["Please"]:
+                msg.contentType = 7
+                msg.text = None
+                msg.contentMetadata = {
+                                     "STKID": "4",
+                                     "STKPKGID": "1",
+                                     "STKVER": "100" }
+                ki.sendMessage(msg)
+                kk.sendMessage(msg)
+            elif msg.text in ["Haaa"]:
+                msg.contentType = 7
