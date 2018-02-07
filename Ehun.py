@@ -1640,3 +1640,34 @@ def bot(op):
                     ku.sendText(msg.to,"Update Name Menjadi : " + string + "")                                 
             elif "Myname11:" in msg.text:
               if msg.from_ in owner:
+                string = msg.text.replace("Myname11:","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile = k1.getProfile()
+                    profile.displayName = string
+                    k1.updateProfile(profile)
+                    k1.sendText(msg.to,"Update Name Menjadi : " + string + "")                  
+    #-------------- copy profile----------
+            elif "Spam: " in msg.text:
+              if msg.from_ in admin:
+                txt = msg.text.split(" ")
+                jmlh = int(txt[2])
+                teks = msg.text.replace("Spam: ")+str(txt[1])+" "+str(jmlh + " ","")
+                tulisan = jmlh * (teks+"\n")
+                 #@reno.a.w
+                if txt[1] == "on":
+                    if jmlh <= 300:
+                       for x in range(jmlh):
+                           cl.sendText(msg.to, teks)
+                    else:
+                       cl.sendText(msg.to, "Kelebihan batas:v")
+                elif txt[1] == "off":
+                    if jmlh <= 300:
+                        cl.sendText(msg.to, tulisan)
+                    else:
+                        cl.sendText(msg.to, "Kelebihan batas :v")
+    #-----------------=Selesai=------------------
+            elif msg.text in ["Bot?"]: #Ngirim Semua Kontak Bot
+              if msg.from_ in admin:
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': mid}
+                cl.sendMessage(msg)
