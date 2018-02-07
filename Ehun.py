@@ -894,3 +894,33 @@ def bot(op):
                 G.preventJoinByTicket = True
                 kb.updateGroup(G)
               else:
+                G = kb.getGroup(op.param1)
+                kb.kickoutFromGroup(op.param1,[op.param2])
+                G.preventJoinByTicket = False
+                kb.updateGroup(G)
+                Ticket = kb.reissueGroupTicket(op.param1)
+                cl.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                kk.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ks.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ku.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ko.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                G.preventJoinByTicket = True
+                #cl.updateGroup(G)
+                kb.updateGroup(G)
+                #wait["blacklist"][op.param2] = True
+                
