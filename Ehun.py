@@ -2323,3 +2323,36 @@ def bot(op):
                 albums = cl.getAlbum(gid)["result"]["items"]
                 i = 0
                 if albums != []:
+                    for album in albums:
+                        cl.deleteAlbum(gid,album["id"])
+                        i += 1
+                if wait["lang"] == "JP":
+                    cl.sendText(msg.to,str(i) + "Deleted albums")
+                else:
+                    cl.sendText(msg.to,str(i) + "åˆ é™¤äº†äº‹çš„ç›¸å†Œã€‚")
+            elif msg.text in ["Group id"]:
+                gid = cl.getGroupIdsJoined()
+                h = ""
+                for i in gid:
+                    h += "[%s]:\n%s\n" % (cl.getGroup(i).name,i)
+                cl.sendText(msg.to,h)
+            elif msg.text in ["Cancelall"]:
+              if msg.from_ in admin:
+                gid = cl.getGroupIdsInvited()
+                for i in gid:
+                    cl.rejectGroupInvitation(i)
+                if wait["lang"] == "JP":
+                    cl.sendText(msg.to,"All invitations have been refused")
+                else:
+                    cl.sendText(msg.to,"æ‹’ç»�äº†å…¨éƒ¨çš„é‚€è¯·ã€‚")
+            elif "album removeat’" in msg.text:
+                gid = msg.text.replace("album removeat’","")
+                albums = cl.getAlbum(gid)["result"]["items"]
+                i = 0
+                if albums != []:
+                    for album in albums:
+                        cl.deleteAlbum(gid,album["id"])
+                        i += 1
+                if wait["lang"] == "JP":
+                    cl.sendText(msg.to,str(i) + "Albums deleted")
+                else:
