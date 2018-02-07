@@ -2728,3 +2728,38 @@ def bot(op):
             elif msg.text in ["Kabur all","One piece left","One Piece left"]:
               if msg.from_ in admin:
                 if msg.toType == 2:
+                    ginfo = cl.getGroup(msg.to)
+                    try:
+                        k1.leaveGroup(msg.to)                                    
+                        ki.leaveGroup(msg.to)
+                        kk.leaveGroup(msg.to)
+                        kc.leaveGroup(msg.to)
+                        ks.leaveGroup(msg.to)
+                        ka.leaveGroup(msg.to)
+                        kb.leaveGroup(msg.to)
+                        ko.leaveGroup(msg.to)
+                        ke.leaveGroup(msg.to)
+                        ku.leaveGroup(msg.to)
+                        cl.leaveGroup(msg.to)
+                    except:
+                        pass
+            
+            elif msg.text in ["Kabur OP"]:
+              if msg.from_ in admin:
+                if msg.toType == 2:
+                    ginfo = cl.getGroup(msg.to)
+                    try:
+                        k1.leaveGroup(msg.to)                        
+                        ki.leaveGroup(msg.to)
+                        kk.leaveGroup(msg.to)
+                        kc.leaveGroup(msg.to)
+                        ks.leaveGroup(msg.to)
+                        ka.leaveGroup(msg.to)
+                        kb.leaveGroup(msg.to)
+                        ko.leaveGroup(msg.to)
+                        ke.leaveGroup(msg.to)
+                        ku.leaveGroup(msg.to)
+                        #cl.leaveGroup(msg.to)
+                    except:
+                        pass
+                      
