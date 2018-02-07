@@ -2599,3 +2599,39 @@ def bot(op):
          #----------------Fungsi Join Group Start-----------------------#
             elif msg.text in ["Masuk","masuk","Join","join"]:
               if msg.from_ in owner:
+                        G = cl.getGroup(msg.to)
+                        ginfo = cl.getGroup(msg.to)
+                        G.preventJoinByTicket = False
+                        cl.updateGroup(G)
+                        invsend = 0
+                        Ticket = cl.reissueGroupTicket(msg.to)
+                        ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        kk.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ks.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ko.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ku.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        k1.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)                        
+                        G = cl.getGroup(msg.to)
+                        ginfo = cl.getGroup(msg.to)
+                        G.preventJoinByTicket = True
+                        cl.updateGroup(G)
+                        print "Semua Sudah Lengkap"
+                        G.preventJoinByTicket(G)
+                        random.choice(KAC).updateGroup(G)
+  
+            elif msg.text in ["Masuk Sob"]:
+              if msg.from_ in owner:
