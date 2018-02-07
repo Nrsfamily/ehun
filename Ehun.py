@@ -1608,3 +1608,35 @@ def bot(op):
                     ka.sendText(msg.to,"Update Name Menjadi : " + string + "")                                 
             elif "Myname7:" in msg.text:
               if msg.from_ in owner:
+                string = msg.text.replace("Myname7:","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile = kb.getProfile()
+                    profile.displayName = string
+                    kb.updateProfile(profile)
+                    kb.sendText(msg.to,"Update Name Menjadi : " + string + "")                                 
+            elif "Myname8:" in msg.text:
+              if msg.from_ in owner:
+                string = msg.text.replace("Myname8:","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile = ko.getProfile()
+                    profile.displayName = string
+                    ko.updateProfile(profile)
+                    ko.sendText(msg.to,"Update Name Menjadi : " + string + "")  
+            elif "Myname9:" in msg.text:
+              if msg.from_ in owner:
+                string = msg.text.replace("Myname9:","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile = ke.getProfile()
+                    profile.displayName = string
+                    ke.updateProfile(profile)
+                    ke.sendText(msg.to,"Update Name Menjadi : " + string + "")                                 
+            elif "Myname10:" in msg.text:
+              if msg.from_ in owner:
+                string = msg.text.replace("Myname10:","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile = ku.getProfile()
+                    profile.displayName = string
+                    ku.updateProfile(profile)
+                    ku.sendText(msg.to,"Update Name Menjadi : " + string + "")                                 
+            elif "Myname11:" in msg.text:
+              if msg.from_ in owner:
