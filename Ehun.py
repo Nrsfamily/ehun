@@ -224,3 +224,23 @@ Idline: http://line.me/ti/p/~alrahmantoganteng""",
     "protectionOn":True,
     "atjointicket":True
     }
+
+         wait2 = {
+    'readPoint':{},
+    'readMember':{},
+    'setTime':{},
+    'ROM':{}
+    }
+
+setTime = {}
+setTime = wait2['setTime']
+
+
+def sendMessage(to, text, contentMetadata={}, contentType=0):
+    mes = Message()
+    mes.to, mes.from_ = to, profile.mid
+    mes.text = text
+    mes.contentType, mes.contentMetadata = contentType, contentMetadata
+    if to not in messageReq:
+        messageReq[to] = -1
+    messageReq[to] += 1
