@@ -1910,3 +1910,40 @@ def bot(op):
                 if msg.from_ in admin:
                   ginfo = cl.getGroup(msg.to)
                   try:
+                    gCreator = ginfo.creator.displayName
+                  except:
+                    gCreator = "Error"
+                  if wait["lang"] == "JP":
+                    if ginfo.invitee is None:
+                      sinvitee = "0"
+                    else:
+                      sinvitee = str(len(ginfo.invitee))
+                    if ginfo.preventJoinByTicket == True:
+                      QR = "Close"
+                    else:
+                      QR = "Open"
+                    random.choice(KAC).sendText(msg.to,"[Group Name]\n" + "[•]" + str(ginfo.name) + "\n\n[Group ID]\n" + msg.to + "\n\n[Group Creator]\n" + "[•]" + gCreator + "\n\n[Group Status]\n" + "[•]Status QR =>" + QR + "\n\n[Group Picture]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\n\nMembers:" + str(len(ginfo.members)) + "\nPending:" + sinvitee)
+                  else:
+                    random.choice(KAC).sendText(msg.to,"[Group Name]\n" + str(ginfo.name) + "\n\n[Group ID]\n" + msg.to + "\n\n[Group Creator]\n" + gCreator + "\n\n[Group Status]\nGroup Picture:\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus)
+                else:
+                  if wait["lang"] == "JP":
+                    cl.sendText(msg.to,"Can not be used outside the group")
+                  else:
+                    cl.sendText(msg.to,"Not for use less than group")
+                
+            elif "My mid" == msg.text:
+              if msg.from_ in admin:
+                random.choice(KAC).sendText(msg.to, msg.from_)
+            elif "Mid Bot" == msg.text:
+              if msg.from_ in admin:
+                cl.sendText(msg.to,mid)
+                ki.sendText(msg.to,Amid)
+                kk.sendText(msg.to,Bmid)
+                kc.sendText(msg.to,Cmid)
+                ks.sendText(msg.to,Dmid)
+                ka.sendText(msg.to,Emid)
+                kb.sendText(msg.to,Fmid)
+                ko.sendText(msg.to,Gmid)
+                ke.sendText(msg.to,Hmid)
+                ku.sendText(msg.to,Imid)
+            elif "Luffy" == msg.text:
