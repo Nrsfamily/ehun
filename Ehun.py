@@ -115,3 +115,36 @@ bot chat :
 > Wkwkwk/Wkwk/Wk
 > Hehehe/Hehe/He
 > Galau
+> Galau
+> You
+> Hadeuh
+> Please
+> Haaa
+> Lol
+> Hmmm/Hmm/Hm
+> Welcome
+> #welcome
+> Woy/woy/Woi/bot/Bot
+
+keywordiseng :
+===============
+> Apakah [sebutkan kata yg anda mau]
+> Berapa besar cinta [sebutkan kata yg anda mau]
+> Adakah [sebutkan kata yg anda mau]
+> Cakepkah [sebutkan kata yg anda mau]
+> Siapakah cewek [sebutkan kata yg anda mau]
+> Siapakah cowok [sebutkan kata yg anda mau]
+******************#"""
+
+Setgroup =""" 
+    [Admin Menu]
+==============
+||[Protect QR]
+||- Qr on/off
+||[Protect Join]
+||- Join on/off
+||[Mid Via Contact]
+||- Contact on/off
+||-[Cancel Invited]
+||- Cancel all
+==============
