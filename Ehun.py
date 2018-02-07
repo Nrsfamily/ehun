@@ -2460,3 +2460,39 @@ def bot(op):
                     gurl = cl.reissueGroupTicket(msg.to)
                     cl.sendText(msg.to,"line://ti/g/" + gurl)
                 else:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Can't be used outside the group")
+                    else:
+                        cl.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Cv1 gurl"]:
+                if msg.toType == 2:
+                    x = cl.getGroup(msg.to)
+                    if x.preventJoinByTicket == True:
+                        x.preventJoinByTicket = False
+                        ki.updateGroup(x)
+                    gurl = ki.reissueGroupTicket(msg.to)
+                    ki.sendText(msg.to,"line://ti/g/" + gurl)
+                else:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Can't be used outside the group")
+                    else:
+                        cl.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Cv2 gurl"]:
+                if msg.toType == 2:
+                    x = cl.getGroup(msg.to)
+                    if x.preventJoinByTicket == True:
+                        x.preventJoinByTicket = False
+                        kk.updateGroup(x)
+                    gurl = kk.reissueGroupTicket(msg.to)
+                    kk.sendText(msg.to,"line://ti/g/" + gurl)
+                else:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Can't be used outside the group")
+                    else:
+                        cl.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Cv3 gurl"]:
+                if msg.toType == 2:
+                    x = cl.getGroup(msg.to)
+                    if x.preventJoinByTicket == True:
+                        x.preventJoinByTicket = False
+                        kc.updateGroup(x)
