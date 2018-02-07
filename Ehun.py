@@ -1129,3 +1129,30 @@ def bot(op):
                     cl.cancelGroupInvitation(op.param1, matched_list)
                               
         if op.type == 22:
+        if op.type == 22:
+            if wait["leaveRoom"] == True:
+                cl.leaveRoom(op.param1)
+        if op.type == 24:
+            if wait["leaveRoom"] == True:
+                cl.leaveRoom(op.param1)
+        if op.type == 26:
+            msg = op.message
+
+
+            if msg.toType == 1:
+                if wait["leaveRoom"] == True:
+                    cl.leaveRoom(msg.to)
+            if msg.contentType == 16:
+                url = msg.contentMetadata("line://home/post?userMid="+mid+"&postId="+"new_post")
+                cl.like(url[25:58], url[66:], likeType=1001)
+        if op.type == 26:
+            msg = op.message
+            if msg.contentType == 13:
+               if wait["wblack"] == True:
+                    if msg.contentMetadata["mid"] in wait["commentBlack"]:
+                        cl.sendText(msg.to,"already")
+                        wait["wblack"] = False
+                    else:
+                        wait["commentBlack"][msg.contentMetadata["mid"]] = True
+                        wait["wblack"] = False
+                        cl.sendText(msg.to,"decided not to comment")
