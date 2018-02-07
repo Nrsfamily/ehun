@@ -415,3 +415,34 @@ def bot(op):
                 else:
                     cl.cancelGroupInvitation(op.param1, matched_list)
                     
+        if op.type == 19: #Member Ke Kick
+          if op.param2 not in Bots:
+            random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+            random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
+              
+        if op.type == 19:
+           if op.param2 in induk: 
+              random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+              random.choice(xbots).inviteIntoGroup(op.param1,[op.param3])
+              
+        if op.type == 19:
+           if op.param2 in Bots:
+              G = cl.getGroup(msg.to)
+              ginfo = cl.getGroup(msg.to)
+              G.preventJoinByTicket = False
+              cl.updateGroup(G)
+              invsend = 0
+              Ticket = cl.reissueGroupTicket(msg.to)
+              ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+              time.sleep(0.01)
+              kk.acceptGroupInvitationByTicket(msg.to,Ticket)
+              time.sleep(0.01)
+              kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+              time.sleep(0.01)
+              ks.acceptGroupInvitationByTicket(msg.to,Ticket)
+              time.sleep(0.01)
+              ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+              time.sleep(0.01)
+              kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                 if op.type == 19: #Member Ke Kick
+          if op.param2 not in Bots:
