@@ -151,3 +151,31 @@ Setgroup ="""
    ONE PIECE BOT
 ==============#"""
 KAC=[cl,ki,kk,kc,ks,ka,kb,ko,ke,ku]
+mid = cl.getProfile().mid #Luffy
+Amid = ki.getProfile().mid #Zorro
+Bmid = kk.getProfile().mid #Sanji
+Cmid = kc.getProfile().mid #Ussop
+Dmid = ks.getProfile().mid #Chooper
+Emid = ka.getProfile().mid #Franky
+Fmid = kb.getProfile().mid #Brook
+Gmid = ko.getProfile().mid #Nami
+Hmid = ke.getProfile().mid #Robin
+Imid = ku.getProfile().mid #Rebecca
+Smid = satpam.getProfile().mid #Akun Utama
+mid1 = k1.getProfile().mid #Backup
+
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Smid,mid1]
+admin=["ub3808de9f7df35f57fb366d157f9790a"]
+owner=["ub3808de9f7df35f57fb366d157f9790a"]
+wait = {
+    'contact':False,
+    'autoJoin':True,
+    'autoCancel':{"on":True,"members":1},
+    'leaveRoom':True,
+    'timeline':True,
+    'autoAdd':True,
+    'message':"""тerima Kasih Sudah Menambahkan Aku Jadi Teman
+≫ Aku Ga Jawab PM Karna aq Cuma Bot Protect ≪
+≫ ONE PIECE BOT PROTECT ≪
+
+Ready:
