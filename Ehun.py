@@ -2565,3 +2565,37 @@ def bot(op):
         #-------------Fungsi Jam Update Finish-------------------#
 
             elif msg.text == "Cctv":
+              if msg.from_ in admin:
+                cl.sendText(msg.to, "Cek yang ngintip")
+                try:
+                  del wait2['readPoint'][msg.to]
+                  del wait2['readMember'][msg.to]
+                except:
+                  pass
+                now2 = datetime.now()
+                wait2['readPoint'][msg.to] = msg.id
+                wait2['readMember'][msg.to] = ""
+                wait2['setTime'][msg.to] = datetime.strftime(now2,"%H:%M")
+                wait2['ROM'][msg.to] = {}
+                #print wait2
+              
+            elif msg.text == "Ciduk":
+                 if msg.from_ in admin:
+                    if msg.to in wait2['readPoint']:
+                        if wait2["ROM"][msg.to].items() == []:
+                            chiya = ""
+                        else:
+                            chiya = ""
+                            for rom in wait2["ROM"][msg.to].items():
+                                #print rom
+                                chiya += rom[1] + "\n"
+
+                        cl.sendText(msg.to, "||Di Read Oleh||%s\n||By : One Piece BOT||\n\n>Pelaku CCTV<\n%s-=CCTV=-\n•Bintitan\n•Panuan\n•Kurapan\n•Kudisan\n\nAmiin Ya Allah\n[%s]" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                    else:
+                        cl.sendText(msg.to, "Ketik Cctv dulu Koplak\nBaru Ketik Ciduk\nDASAR PIKUN ♪")
+#-----------------------------------------------
+
+#-----------------------------------------------
+         #----------------Fungsi Join Group Start-----------------------#
+            elif msg.text in ["Masuk","masuk","Join","join"]:
+              if msg.from_ in owner:
