@@ -1301,3 +1301,33 @@ def bot(op):
                 ki.inviteIntoGroup(msg.to,[midd])
             elif "Zorro invite " in msg.text:
               if msg.from_ in admin:
+                midd = msg.text.replace("tinvite ","")
+                kk.findAndAddContactsByMid(midd)
+                kk.inviteIntoGroup(msg.to,[midd])
+            elif "Zorro invite " in msg.text:
+              if msg.from_ in admin:
+                midd = msg.text.replace("finvite ","")
+                kc.findAndAddContactsByMid(midd)
+                kc.inviteIntoGroup(msg.to,[midd])
+    #--------------- SC Add Admin ---------
+            elif "Admin add @" in msg.text:
+              if msg.from_ in owner:
+                print "[Command]Staff add executing"
+                _name = msg.text.replace("Admin add @","")
+                _nametarget = _name.rstrip('  ')
+                gs = cl.getGroup(msg.to)
+                gs = ki.getGroup(msg.to)
+                gs = kk.getGroup(msg.to)
+                gs = kc.getGroup(msg.to)
+                gs = ks.getGroup(msg.to)
+                gs = ka.getGroup(msg.to)
+                gs = kb.getGroup(msg.to)
+                gs = ku.getGroup(msg.to)
+                gs = ke.getGroup(msg.to)
+                gs = ko.getGroup(msg.to)
+                gs = satpam.getGroup(msg.to)
+                targets = []
+                for g in gs.members:
+                    if _nametarget == g.displayName:
+                        targets.append(g.mid)
+                if targets == []:
