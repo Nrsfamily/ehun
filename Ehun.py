@@ -27,3 +27,91 @@ kk.loginResult()
 kc = LINETCR.LINE() #Ussop
 #kc.login(token="token anda")#ganti dgn token kalian
 kc.login(token="
+
+print "login success Boss"
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+helpMessage =""" ^[One Piece Bot]^
+OWNER •Eehun•
+http://line.me/ti/p/~sarehun
+
+Command bot for owner :
+======================
+> Set/Status
+> Help
+> Admin menu
+> Gn (ganti nama grup)
+> kick mid (kick + mid target)
+> Invite mid (Invite + mid target)
+> Admin add @ (tambah admin + tag kontak)
+> Admin remove @ (hapus admin + tag kontak)
+> Adminlist/adminlist (list admin)
+> Allbio: ... (bikin status di bio bot)
+> Myname:...
+> Cancel (membatalkan undangan)
+> Buka qr 
+> Tutup qr
+> Info Group (info grup tsb)
+> Message change: ... 
+> /invitemeto: ... (/invitemeto: id group)
+> Kuy/One piece/Join OP (Bot masuk group)owner/creator
+> Kuya/Koplak OP (bot masuk group)bot
+> Koplak join (bot masuk room)
+> Bye op/Kabur all/Kaboor all/One piece left (klr dari room)
+> Kabur OP(klr Room)
+> Bot like (semua bot ngelike status akun utama)
+> Like temen (semua bot ngelike status temen)
+> Kill ..(kick banned)
+> Ready op (ratakan)
+> Nk .. (kick tag member)
+> LG (list group)
+> Bot out/Op bye (klr dari semua group)
+
+
+> Add on/off
+> Comment on/off
+> Jam on
+> Change clock
+> Jam Update
+
+[ command di atas hanya utk owner bot => Ehun
+
+
+Command bot for admin :
+=======================
+> Admin menu
+> Help
+> Keyword
+> Spam: ...
+> Bot? (cek kontak bot)
+> Me
+> My mid (cek mid kita sendiri)
+> Mid Bot (cek mid bot)
+> Cctv (ngeset Reader)
+> Ciduk (ngecek yg ngintip) 
+> Tag all/Tagall (tag semua member)
+> Blacklist @ 
+> Banned @
+> Mid @
+> Unban @
+> Up/up/Up Chat/Up chat/up chat/Upchat/upchat (naik chat spam)
+> GBc ... (ngeBC ke semua group yg ada bot trsbt)
+> Absen/Absen bot/Absen dulu/Respon
+> Speed/Sp
+> Ban
+> Unban
+> Creator
+> Banlist
+> Cek ban
+> Kill ban
+> Clear
+
+******************"""
+
+keyword =""" ^[One Piece Bot]^
+bot chat :
+==========
+> Wkwkwk/Wkwk/Wk
+> Hehehe/Hehe/He
+> Galau
