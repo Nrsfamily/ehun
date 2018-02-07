@@ -1421,3 +1421,31 @@ def bot(op):
                             pass
                 print "[Command]Staff add executed"
               else:
+                cl.sendText(msg.to,"Command denied.")
+                cl.sendText(msg.to,"Owner permission required.")
+                
+            elif "Owner remove @" in msg.text:
+              if msg.from_ in owner:
+                print "[Command]Staff remove executing"
+                _name = msg.text.replace("Owner remove @","")
+                _nametarget = _name.rstrip('  ')
+                gs = cl.getGroup(msg.to)
+                gs = ki.getGroup(msg.to)
+                gs = kk.getGroup(msg.to)
+                gs = kc.getGroup(msg.to)
+                gs = ks.getGroup(msg.to)
+                gs = ka.getGroup(msg.to)
+                gs = kb.getGroup(msg.to)
+                gs = ku.getGroup(msg.to)
+                gs = ke.getGroup(msg.to)
+                gs = ko.getGroup(msg.to)
+                gs = satpam.getGroup(msg.to)
+                targets = []
+                for g in gs.members:
+                    if _nametarget == g.displayName:
+                        targets.append(g.mid)
+                if targets == []:
+                   random.choice(KAC).sendText(msg.to,"Contact not found")
+                else:
+                   for target in targets:
+                        try:
