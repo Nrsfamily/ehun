@@ -1771,3 +1771,42 @@ def bot(op):
             #elif "gurl" == msg.text:
                 #print cl.getGroup(msg.to)
                 ##cl.sendMessage(msg)
+            elif msg.text in ["Buka qr","Open qr"]:
+              if msg.from_ in admin:
+                if msg.toType == 2:
+                    X = random.choice(KAC).getGroup(msg.to)
+                    X.preventJoinByTicket = False
+                    random.choice(KAC).updateGroup(X)
+                    if wait["lang"] == "JP":
+                        random.choice(KAC).sendText(msg.to,"QR Sudah Dibuka")
+                    else:
+                        random.choice(KAC).sendText(msg.to,"Sudah Terbuka Plak")
+                else:
+                    if wait["lang"] == "JP":
+                        random.choice(KAC).sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        random.choice(KAC).sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Luffy buka qr","Luffy open qr"]:
+                if msg.toType == 2:
+                    X = cl.getGroup(msg.to)
+                    X.preventJoinByTicket = False
+                    cl.updateGroup(X)
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Done Plak")
+                    else:
+                        cl.sendText(msg.to,"already open")
+                else:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        cl.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Zorro buka qr","Zorro open qr"]:
+                if msg.toType == 2:
+                    X = ki.getGroup(msg.to)
+                    X.preventJoinByTicket = False
+                    kk.updateGroup(X)
+                    if wait["lang"] == "JP":
+                        ki.sendText(msg.to,"Done Plak")
+                    else:
+                        ki.sendText(msg.to,"already open")
+                else:
