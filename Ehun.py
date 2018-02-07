@@ -1514,3 +1514,34 @@ def bot(op):
     #-------------=SC AllBio=---------------- Ganti Bio Semua Bot Format => Allbio: SUKA SUKA KALIAN :D
             elif "Allbio:" in msg.text:
               if msg.from_ in owner:
+                string = msg.text.replace("Allbio:","")
+                if len(string.decode('utf-8')) <= 500:
+                    profile = cl.getProfile()
+                    profile.statusMessage = string
+                    cl.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 500:
+                    profile = ki.getProfile()
+                    profile.statusMessage = string
+                    ki.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 500:
+                    profile = kk.getProfile()
+                    profile.statusMessage = string
+                    kk.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 500:
+                    profile = kc.getProfile()
+                    profile.statusMessage = string
+                    kc.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 500:
+                    profile = ks.getProfile()
+                    profile.statusMessage = string
+                    ks.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 500:
+                    profile = ka.getProfile()
+                    profile.statusMessage = string
+                    ka.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 500:
+                    profile = kb.getProfile()
+                    profile.statusMessage = string
+                    kb.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 500:
+                    profile = ku.getProfile()
