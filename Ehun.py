@@ -2155,3 +2155,44 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"done")
                 else:
+                    wait["contact"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cek Mid Lewat Share Kontak Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["è‡ªå‹•å�‚åŠ :ã‚ªãƒ³","Join on","Auto join on","è‡ªå‹•å�ƒåŠ ï¼šé–‹"]:
+              if msg.from_ in admin:
+                if wait["autoJoin"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already on")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["autoJoin"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already on")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["è‡ªå‹•å�‚åŠ :ã‚ªãƒ•","Join off","Auto join off","è‡ªå‹•å�ƒåŠ ï¼šé—œ"]:
+              if msg.from_ in admin:
+                if wait["autoJoin"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already off")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["autoJoin"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already off")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Gcancel:"]:
+                try:
+                    strnum = msg.text.replace("Gcancel:","")
+                    if strnum == "off":
+                        wait["autoCancel"]["on"] = False
+                        if wait["lang"] == "JP":
+                            cl.sendText(msg.to,"Invitation refused turned off\nTo turn on please specify the number of people and send")
+                        else:
+                            cl.sendText(msg.to,"å…³äº†é‚€è¯·æ‹’ç»�ã€‚è¦�æ—¶å¼€è¯·æŒ‡å®šäººæ•°å�‘é€�")
+                    else:
