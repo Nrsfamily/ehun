@@ -498,3 +498,45 @@ def bot(op):
               
         if op.type == 19:
           try:
+            if op.param3 in Smid: #Akun Utama Ke Kick
+              G = random.choice(KAC).getGroup(op.param1)
+              random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+              G.preventJoinByTicket = False
+              random.choice(KAC).updateGroup(G)
+              Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
+              satpam.acceptGroupInvitationByTicket(op.param1,Ticket)
+              time.sleep(0.01)
+              G.preventJoinByTicket = True
+              random.choice(KAC).updateGroup(G)
+              satpam.updateGroup(G)
+              wait["blacklist"][op.param2] = True
+
+            if op.param3 in Smid:
+              if op.param2 in mid:
+                G = cl.getGroup(op.param1)
+                G.preventJoinByTicket = False
+                cl.updateGroup(G)
+                Ticket = cl.reissueGroupTicket(op.param1)
+                cl.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                kk.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ks.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ka.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                kb.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ku.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ko.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                time.sleep(0.01)
+                G.preventJoinByTicket = True
+                cl.updateGroup(G)
+              else:
