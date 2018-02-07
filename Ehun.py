@@ -1704,3 +1704,35 @@ def bot(op):
                 msg.contentMetadata = {'mid': Hmid}
                 ke.sendMessage(msg)
                 
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Imid}
+                ku.sendMessage(msg)                
+            elif msg.text in ["Me"]:
+              if msg.from_ in admin:
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': msg.from_}
+                random.choice(KAC).sendMessage(msg)
+            elif msg.text in ["Cv2"]:
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Bmid}
+                kk.sendMessage(msg)
+            elif msg.text in ["æ„›ã�®ãƒ—ãƒ¬ã‚¼ãƒ³ãƒˆ","Gift"]:
+              if msg.from_ in admin:
+                msg.contentType = 9
+                msg.contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58',
+                                    'PRDTYPE': 'THEME',
+                                    'MSGTPL': '5'}
+                msg.text = None
+                random.choice(KAC).sendMessage(msg)
+            elif msg.text in ["æ„›ã�®ãƒ—ãƒ¬ã‚¼ãƒ³ãƒˆ","All gift"]:
+              if msg.from_ in admin:
+                msg.contentType = 9
+                msg.contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58',
+                                    'PRDTYPE': 'THEME',
+                                    'MSGTPL': '12'}
+                msg.text = None
+                ki.sendMessage(msg)
+                kk.sendMessage(msg)
+                kc.sendMessage(msg)
+            elif msg.text in ["Cancel","cancel"]:
+              if msg.from_ in admin:
