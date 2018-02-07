@@ -2082,3 +2082,37 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {"mid":mmid}
                 cl.sendMessage(msg)
+            elif msg.text in ["Cancel on","cancel on"]:
+              if msg.from_ in admin:
+                if wait["Protectcancl"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cancel Semua Undangan On")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectcancl"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cancel Semua Undangan On")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Cancel off","cancel off"]:
+              if msg.from_ in admin:
+                if wait["Protectcancl"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cancel Semua Undangan Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectcancl"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Cancel Semua Undangan Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Qr on","qr on"]:
+              if msg.from_ in admin:
+                if wait["Protectgr"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect QR On")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
