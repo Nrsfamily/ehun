@@ -1736,3 +1736,38 @@ def bot(op):
                 kc.sendMessage(msg)
             elif msg.text in ["Cancel","cancel"]:
               if msg.from_ in admin:
+                if msg.toType == 2:
+                    X = cl.getGroup(msg.to)
+                    if X.invitee is not None:
+                        gInviMids = [contact.mid for contact in X.invitee]
+                        random.choice(KAC).cancelGroupInvitation(msg.to, gInviMids)
+                    else:
+                        if wait["lang"] == "JP":
+                            cl.sendText(msg.to,"No one is inviting")
+                        else:
+                            cl.sendText(msg.to,"Sorry, nobody absent")
+                else:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        cl.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Op cancel","Bot cancel"]:
+              if msg.from_ in admin:
+                if msg.toType == 2:
+                    G = k3.getGroup(msg.to)
+                    if G.invitee is not None:
+                        gInviMids = [contact.mid for contact in G.invitee]
+                        k3.cancelGroupInvitation(msg.to, gInviMids)
+                    else:
+                        if wait["lang"] == "JP":
+                            k3.sendText(msg.to,"No one is inviting")
+                        else:
+                            k3.sendText(msg.to,"Sorry, nobody absent")
+                else:
+                    if wait["lang"] == "JP":
+                        k3.sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        k3.sendText(msg.to,"Not for use less than group")
+            #elif "gurl" == msg.text:
+                #print cl.getGroup(msg.to)
+                ##cl.sendMessage(msg)
