@@ -1361,3 +1361,34 @@ def bot(op):
                 gs = ko.getGroup(msg.to)
                 gs = satpam.getGroup(msg.to)
                 targets = []
+                for g in gs.members:
+                    if _nametarget == g.displayName:
+                        targets.append(g.mid)
+                if targets == []:
+                   random.choice(KAC).sendText(msg.to,"Contact not found")
+                else:
+                   for target in targets:
+                        try:
+                            admin.remove(target)
+                            cl.sendText(msg.to,"Admin Dihapus")
+                        except:
+                            pass
+                print "[Command]Staff remove executed"
+              else:
+                cl.sendText(msg.to,"Command denied.")
+                cl.sendText(msg.to,"Admin permission required.")
+                
+            elif msg.text in ["Adminlist","adminlist"]:
+              if admin == []:
+                  cl.sendText(msg.to,"The stafflist is empty")
+              else:
+                  cl.sendText(msg.to,"Tunggu...")
+                  mc = "||Admin One Piece Bot||\n=====================\n"
+                  for mi_d in admin:
+                      mc += "••>" +cl.getContact(mi_d).displayName + "\n"
+                  cl.sendText(msg.to,mc)
+                  print "[Command]Stafflist executed"
+    #--------------------------------------
+    #--------------- SC Add Owner2 ---------
+            elif "Owner add @" in msg.text:
+              if msg.from_ in owner:
