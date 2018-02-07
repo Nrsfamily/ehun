@@ -2496,3 +2496,32 @@ def bot(op):
                     if x.preventJoinByTicket == True:
                         x.preventJoinByTicket = False
                         kc.updateGroup(x)
+                    gurl = kc.reissueGroupTicket(msg.to)
+                    kc.sendText(msg.to,"line://ti/g/" + gurl)
+                else:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Can't be used outside the group")
+                    else:
+                        cl.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Comment bl "]:
+                wait["wblack"] = True
+                cl.sendText(msg.to,"add to comment bl")
+            elif msg.text in ["Comment wl "]:
+                wait["dblack"] = True
+                cl.sendText(msg.to,"wl to comment bl")
+            elif msg.text in ["Comment bl confirm"]:
+                if wait["commentBlack"] == {}:
+                    cl.sendText(msg.to,"confirmed")
+                else:
+                    cl.sendText(msg.to,"Blacklist")
+                    mc = ""
+                    for mi_d in wait["commentBlack"]:
+                        mc += "" +cl.getContact(mi_d).displayName + "\n"
+                    cl.sendText(msg.to,mc)
+                    
+        #-------------Fungsi Jam on/off Start-------------------#            
+            elif msg.text in ["Jam on"]:
+              if msg.from_ in admin:
+                if wait["clock"] == True:
+                    kc.sendText(msg.to,"Bot 4 jam on")
+                else:
