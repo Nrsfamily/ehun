@@ -2633,5 +2633,37 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         random.choice(KAC).updateGroup(G)
   
-            elif msg.text in ["Masuk Sob"]:
+            elif msg.text in ["Masuk all"]:
               if msg.from_ in owner:
+                        G = satpam.getGroup(msg.to)
+                        ginfo = satpam.getGroup(msg.to)
+                        G.preventJoinByTicket = False
+                        satpam.updateGroup(G)
+                        invsend = 0
+                        Ticket = satpam.reissueGroupTicket(msg.to)
+                        cl.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        kk.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ks.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ko.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ku.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        k1.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)                        
+                        G = satpam.getGroup(msg.to)
+                        ginfo = satpam.getGroup(msg.to)
+                        G.preventJoinByTicket = True
+                        satpam.updateGroup(G)
