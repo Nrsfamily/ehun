@@ -2424,3 +2424,39 @@ def bot(op):
                   except:
                     cl.sendText(msg.to,"Mungkin saya tidak di dalaam grup itu")
 #--------===---====--------------
+            elif msg.text in ["ã‚³ãƒ¡ãƒ³ãƒˆ:ã‚ªãƒ³","Comment on","Comment:on","è‡ªå‹•é¦–é �ç•™è¨€ï¼šé–‹"]:
+              if msg.from_ in admin:
+                if wait["commentOn"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"done")
+                    else:
+                        cl.sendText(msg.to,"already on")
+                else:
+                    wait["commentOn"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"done")
+                    else:
+                        cl.sendText(msg.to,"è¦�äº†å¼€ã€‚")
+            elif msg.text in ["ã‚³ãƒ¡ãƒ³ãƒˆ:ã‚ªãƒ•","Comment off","comment off","è‡ªå‹•é¦–é �ç•™è¨€ï¼šé—œ"]:
+                if wait["commentOn"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"done")
+                    else:
+                        cl.sendText(msg.to,"already off")
+                else:
+                    wait["commentOn"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"done")
+                    else:
+                        cl.sendText(msg.to,"è¦�äº†å…³æ–­ã€‚")
+            elif msg.text in ["Comment","ç•™è¨€ç¢ºèª�"]:
+                cl.sendText(msg.to,"message changed to\n\n" + str(wait["comment"]))
+            elif msg.text in ["Gurl"]:
+                if msg.toType == 2:
+                    x = cl.getGroup(msg.to)
+                    if x.preventJoinByTicket == True:
+                        x.preventJoinByTicket = False
+                        cl.updateGroup(x)
+                    gurl = cl.reissueGroupTicket(msg.to)
+                    cl.sendText(msg.to,"line://ti/g/" + gurl)
+                else:
