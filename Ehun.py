@@ -1671,3 +1671,36 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': mid}
                 cl.sendMessage(msg)
+       
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Amid}
+                ki.sendMessage(msg)
+
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Bmid}
+                kk.sendMessage(msg)
+
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Cmid}
+                kc.sendMessage(msg)
+                
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Dmid}
+                ks.sendMessage(msg)
+                
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Emid}
+                ka.sendMessage(msg)
+                
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Fmid}
+                kb.sendMessage(msg)
+                
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Gmid}
+                ko.sendMessage(msg)
+                
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': Hmid}
+                ke.sendMessage(msg)
+                
