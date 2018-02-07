@@ -148,3 +148,6 @@ Setgroup ="""
 ||-[Cancel Invited]
 ||- Cancel all
 ==============
+   ONE PIECE BOT
+==============#"""
+KAC=[cl,ki,kk,kc,ks,ka,kb,ko,ke,ku]
