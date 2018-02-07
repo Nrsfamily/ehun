@@ -1810,3 +1810,38 @@ def bot(op):
                     else:
                         ki.sendText(msg.to,"already open")
                 else:
+                    if wait["lang"] == "JP":
+                        ki.sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        ki.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Sanji open qr","Sanji buka qr"]:
+                if msg.toType == 2:
+                    X = kc.getGroup(msg.to)
+                    X.preventJoinByTicket = False
+                    kc.updateGroup(X)
+                    if wait["lang"] == "JP":
+                        kc.sendText(msg.to,"Done Plak")
+                    else:
+                        kc.sendText(msg.to,"already open")
+                else:
+                    if wait["lang"] == "JP":
+                        kc.sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        kc.sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Tutup qr","Close qr"]:
+              if msg.from_ in admin:
+                if msg.toType == 2:
+                    X = random.choice(KAC).getGroup(msg.to)
+                    X.preventJoinByTicket = True
+                    random.choice(KAC).updateGroup(X)
+                    if wait["lang"] == "JP":
+                        random.choice(KAC).sendText(msg.to,"Kode QR Sudah Di Tutup")
+                    else:
+                        random.choice(KAC).sendText(msg.to,"Sudah Tertutup Plak")
+                else:
+                    if wait["lang"] == "JP":
+                        random.choice(KAC).sendText(msg.to,"Can not be used outside the group")
+                    else:
+                        random.choice(KAC).sendText(msg.to,"Not for use less than group")
+            elif msg.text in ["Luffy close qr","Luffy tutup qr"]:
+                if msg.toType == 2:
