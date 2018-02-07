@@ -2196,3 +2196,42 @@ def bot(op):
                         else:
                             cl.sendText(msg.to,"å…³äº†é‚€è¯·æ‹’ç»�ã€‚è¦�æ—¶å¼€è¯·æŒ‡å®šäººæ•°å�‘é€�")
                     else:
+                        num =  int(strnum)
+                        wait["autoCancel"]["on"] = True
+                        if wait["lang"] == "JP":
+                            cl.sendText(msg.to,strnum + "The group of people and below decided to automatically refuse invitation")
+                        else:
+                            cl.sendText(msg.to,strnum + "ä½¿äººä»¥ä¸‹çš„å°�ç»„ç”¨è‡ªåŠ¨é‚€è¯·æ‹’ç»�")
+                except:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Value is wrong")
+                    else:
+                        cl.sendText(msg.to,"Bizarre ratings")
+            elif msg.text in ["å¼·åˆ¶è‡ªå‹•é€€å‡º:ã‚ªãƒ³","Leave on","Auto leave:on","å¼·åˆ¶è‡ªå‹•é€€å‡ºï¼šé–‹"]:
+              if msg.from_ in admin:
+                if wait["leaveRoom"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already on")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["leaveRoom"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"done")
+                    else:
+                        cl.sendText(msg.to,"è¦�äº†å¼€ã€‚")
+            elif msg.text in ["å¼·åˆ¶è‡ªå‹•é€€å‡º:ã‚ªãƒ•","Leave off","Auto leave:off","å¼·åˆ¶è‡ªå‹•é€€å‡ºï¼šé—œ"]:
+              if msg.from_ in admin:
+                if wait["leaveRoom"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already off")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["leaveRoom"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"done")
+                    else:
+                        cl.sendText(msg.to,"already")
+            elif msg.text in ["å…±æœ‰:ã‚ªãƒ³","Share on","Share on"]:
+              if msg.from_ in admin:
