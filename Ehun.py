@@ -1545,3 +1545,34 @@ def bot(op):
                     kb.updateProfile(profile)
                 if len(string.decode('utf-8')) <= 500:
                     profile = ku.getProfile()
+                    profile.statusMessage = string
+                    ku.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 500:
+                    profile = ke.getProfile()
+                    profile.statusMessage = string
+                    ke.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 500:
+                    profile = ko.getProfile()
+                    profile.statusMessage = string
+                    ko.updateProfile(profile)
+                    cl.sendText(msg.to,"Bio berubah menjadi " + string + "")
+    #--------------=Finish=----------------
+    #--------------= SC Ganti nama Owner=--------------
+            elif "Myname1:" in msg.text:
+              if msg.from_ in owner:
+                string = msg.text.replace("Myname1:","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile = cl.getProfile()
+                    profile.displayName = string
+                    cl.updateProfile(profile)
+                    cl.sendText(msg.to,"Update Name Menjadi : " + string + "")
+            elif "Myname2:" in msg.text:
+              if msg.from_ in owner:
+                string = msg.text.replace("Myname2:","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile = ki.getProfile()
+                    profile.displayName = string
+                    ki.updateProfile(profile)
+                    ki.sendText(msg.to,"Update Name Menjadi : " + string + "")                 
+            elif "Myname3:" in msg.text:
+              if msg.from_ in owner:
