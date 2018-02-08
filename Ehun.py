@@ -2968,3 +2968,40 @@ def bot(op):
                    sendMessage(msg.to,"user does not exist")
                    pass
                 else:
+                   for target in targets:
+                      try:
+                        satpam.kickoutFromGroup(msg.to,[target])
+                        print (msg.to,[g.mid])
+                      except:
+                        satpam.leaveGroup(msg.to)
+                        gs = cl.getGroup(msg.to)
+                        gs.preventJoinByTicket = True
+                        cl.updateGroup(gs)
+                        gs.preventJoinByTicket(gs)
+                        cl.updateGroup(gs)
+        #----------------Fungsi Kick User Target Finish----------------------#      
+            elif "Blacklist @ " in msg.text:
+              if msg.from_ in admin:
+                _name = msg.text.replace("Blacklist @ ","")
+                _kicktarget = _name.rstrip(' ')
+                gs = random.choice(KAC).getGroup(msg.to)
+                targets = []
+                for g in gs.members:
+                    if _kicktarget == g.displayName:
+                        targets.append(g.mid)
+                        if targets == []:
+                            random.choice(KAC).sendText(msg.to,"Not found")
+                        else:
+                            for target in targets:
+                                try:
+                                    wait["blacklist"][target] = True
+                                    f=codecs.open('st2__b.json','w','utf-8')
+                                    json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                                    random.choice(KAC).sendText(msg.to,"Succes Plak")
+                                except:
+                                    random.choice(KAC).sendText(msg.to,"error")
+            
+            #----------------Fungsi Banned User Target Start-----------------------#
+            elif "Banned @" in msg.text:
+              if msg.from_ in admin:
+                if msg.toType == 2:
