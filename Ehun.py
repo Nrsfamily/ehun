@@ -3112,3 +3112,36 @@ def bot(op):
         #-------------Fungsi Broadcast Start------------#
             elif "GBc " in msg.text: #NgeBC Ke semua Group yang di Join :D
               if msg.from_ in owner:
+                 bctxt = msg.text.replace("GBc ","")
+                 a = cl.getGroupIdsJoined()
+                 a = ki.getGroupIdsJoined()
+                 a = kk.getGroupIdsJoined()
+                 a = kc.getGroupIdsJoined()
+                 a = ks.getGroupIdsJoined()
+                 a = ka.getGroupIdsJoined()
+                 a = ku.getGroupIdsJoined()
+                 a = ke.getGroupIdsJoined()
+                 a = ko.getGroupIdsJoined()
+                 a = kb.getGroupIdsJoined()
+                 for taf in a:
+                     cl.sendText(taf, (bctxt))
+                     ki.sendText(taf, (bctxt))
+                     kk.sendText(taf, (bctxt))
+                     kc.sendText(taf, (bctxt))
+                     ks.sendText(taf, (bctxt))
+                     ka.sendText(taf, (bctxt))
+                     kb.sendText(taf, (bctxt))
+                     ke.sendText(taf, (bctxt))
+                     ku.sendText(taf, (bctxt))
+                     ko.sendText(taf, (bctxt))
+      #--------------Fungsi Broadcast Finish-----------#
+
+        #-------------Fungsi Broadcast Start------------#
+            elif "Bc " in msg.text:
+				bctxt = msg.text.replace("Bc ","")
+				ki.sendText(msg.to,(bctxt))
+				kk.sendText(msg.to,(bctxt))
+				kc.sendText(msg.to,(bctxt))
+       #--------------Fungsi Broadcast Finish-----------#
+       #--------------------Start-----------------------#       
+            elif "Apakah " in msg.text:
