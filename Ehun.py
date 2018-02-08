@@ -2838,3 +2838,34 @@ def bot(op):
                       cl.sendMessage(msg)
                   except Exception as error:
                       print error
+    #-------------Fungsi Tag All Finish---------------#
+            elif msg.text in ["Bot Like", "Bot like"]: #Semua Bot Ngelike Status Akun Utama / owner
+              if msg.from_ in owner:
+                print "[Command]Like executed"
+                cl.sendText(msg.to,"Kami Siap Like Status Owner")
+                try:
+                  likePost()
+                except:
+                  pass
+                
+            elif msg.text in ["Like temen", "Bot like temen"]: #Semua Bot Ngelike Status Teman
+              if msg.from_ in owner:
+                print "[Command]Like executed"
+                cl.sendText(msg.to,"Kami Siap Like Status Teman Boss")
+                try:
+                  autolike()
+                except:
+                  pass
+        #----------------Fungsi Banned Kick Target Start-----------------------#
+            elif msg.text in ["Kill "]:
+              if msg.from_ in admin:
+                if msg.toType == 2:
+                    group = random.choice(KAC).getGroup(msg.to)
+                    gMembMids = [contact.mid for contact in group.members]
+                    matched_list = []
+                    for tag in wait["blacklist"]:
+                        matched_list+=filter(lambda str: str == tag, gMembMids)
+                    if matched_list == []:
+                        random.choice(KAC).sendText(msg.to,"Selamat tinggal")
+                        random.choice(KAC).sendText(msg.to,"Jangan masuk lagi􀨁􀆷devil smile􏿿")
+                        return
