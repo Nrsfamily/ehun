@@ -3077,3 +3077,38 @@ def bot(op):
         #-------------Fungsi Spam Start---------------------#
             elif msg.text in ["up"]:
               if msg.from_ in admin:
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"P 􀔃􀆶squared up!����")
+                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+        #-------------Fungsi Spam Finish---------------------#
+
+        #-------------Fungsi Broadcast Start------------#
+            elif "GBc " in msg.text: #NgeBC Ke semua Group yang di Join :D
+              if msg.from_ in owner:
