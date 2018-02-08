@@ -2900,3 +2900,36 @@ def bot(op):
                     if targets == []:
                         random.choice(KAC).sendText(msg.to,"Not found")
                     else:
+                        for target in targets:
+                          if target not in admin and Bots:
+                            try:
+                                klist=[cl,ki,kk,kc,ks,ka,kb,ku,ke,ko]
+                                kicker=random.choice(klist)
+                                kicker.kickoutFromGroup(msg.to,[target])
+                                print (msg.to,[g.mid])
+                            except:
+                                random.choice(KAC).sendText(msg.to,"Sorry Brader")
+                                random.choice(KAC).sendText(msg.to,"Sorry Sister")
+                                random.choice(KAC).sendText(msg.to,"No Baper")
+
+            elif "Bersih" in msg.text:
+              if msg.from_ in Bots:
+                if msg.toType == 2:
+                    print "ok"
+                    _name = msg.text.replace("Greet","")
+                    gs = ki.getGroup(msg.to)
+                    gs = kk.getGroup(msg.to)
+                    gs = kc.getGroup(msg.to)
+                    ki.sendText(msg.to,"maaf kalo gak sopan")
+                    kk.sendText(msg.to,"makasih semuanya..")
+                    kc.sendText(msg.to,"hehehhehe")
+                    msg.contentType = 13
+                    #msg.contentMetadata = {'mid': mid}
+                    ks.sendMessage(msg)
+                    targets = []
+                    for g in gs.members:
+                        if _name in g.displayName:
+                            targets.append(g.mid)
+                    if targets == []:
+                        ki.sendText(msg.to,"Not found")
+                    else:
