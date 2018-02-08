@@ -3335,3 +3335,38 @@ def bot(op):
       
             elif msg.text in ["Cek ban"]:
               if msg.from_ in admin:
+                if msg.toType == 2:
+                    group = cl.getGroup(msg.to)
+                    gMembMids = [contact.mid for contact in group.members]
+                    matched_list = []
+                    for tag in wait["blacklist"]:
+                        matched_list+=filter(lambda str: str == tag, gMembMids)
+                    cocoa = ""
+                    for mm in matched_list:
+                        cocoa += mm + "\n"
+                    random.choice(KAC).sendText(msg.to,cocoa + "")
+            elif msg.text in ["Kill ban"]:
+              if msg.from_ in admin:
+                if msg.toType == 2:
+                    group = cl.getGroup(msg.to)
+                    gMembMids = [contact.mid for contact in group.members]
+                    matched_list = []
+                    for tag in wait["blacklist"]:
+                        matched_list+=filter(lambda str: str == tag, gMembMids)
+                    if matched_list == []:
+                        random.choice(KAC).sendText(msg.to,"There was no blacklist user")
+                        random.choice(KAC).sendText(msg.to,"There was no blacklist user")
+                        random.choice(KAC).sendText(msg.to,"There was no blacklist user")
+                        random.choice(KAC).sendText(msg.to,"There was no blacklist user")
+                        return
+                    for jj in matched_list:
+                        random.choice(KAC).kickoutFromGroup(msg.to,[jj])
+                        random.choice(KAC).kickoutFromGroup(msg.to,[jj])
+                        random.choice(KAC).kickoutFromGroup(msg.to,[jj])
+                        random.choice(KAC).kickoutFromGroup(msg.to,[jj])
+                    random.choice(KAC).sendText(msg.to,"Blacklist emang pantas tuk di usir")
+                    random.choice(KAC).sendText(msg.to,"Blacklist emang pantas tuk di usir")
+                    random.choice(KAC).sendText(msg.to,"Blacklist emang pantas tuk di usir")
+                    random.choice(KAC).sendText(msg.to,"Blacklist emang pantas tuk di usir")
+            elif msg.text in ["Clear"]:
+              if msg.from_ in admin:
