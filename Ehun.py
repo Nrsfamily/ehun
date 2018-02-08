@@ -2933,3 +2933,38 @@ def bot(op):
                     if targets == []:
                         ki.sendText(msg.to,"Not found")
                     else:
+                        for target in targets:
+                          if target not in Bots:
+                            try:
+                                klist=[ki,kk,kc,ks,ka]
+                                kicker=random.choice(klist)
+                                kicker.kickoutFromGroup(msg.to,[target])
+                                print (msg.to,[g.mid])
+                            except:
+                                ki.sendText(msg.to,"Group cleanse")
+                                kk.sendText(msg.to,"Group cleanse")
+                                kc.sendText(msg.to,"Group cleanse")
+        #----------------Fungsi Kick User Target Start----------------------#
+            elif "Nk " in msg.text:
+              if msg.from_ in admin:
+                nk0 = msg.text.replace("Nk ","")
+                nk1 = nk0.lstrip()
+                nk2 = nk1.replace("@","")
+                nk3 = nk2.rstrip()
+                _name = nk3
+                gs = cl.getGroup(msg.to)
+                ginfo = cl.getGroup(msg.to)
+                gs.preventJoinByTicket = False
+                cl.updateGroup(gs)
+                invsend = 0
+                Ticket = cl.reissueGroupTicket(msg.to)
+                satpam.acceptGroupInvitationByTicket(msg.to,Ticket)
+                time.sleep(0.01)
+                targets = []
+                for s in gs.members:
+                    if _name in s.displayName:
+                       targets.append(s.mid)
+                if targets == []:
+                   sendMessage(msg.to,"user does not exist")
+                   pass
+                else:
