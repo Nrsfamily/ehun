@@ -3293,3 +3293,45 @@ def bot(op):
       #-------------Fungsi Banned Send Contact Start------------------#
             elif msg.text in ["Ban"]:
               if msg.from_ in owner:
+                wait["wblacklist"] = True
+                cl.sendText(msg.to,"Kirim contact")
+                ki.sendText(msg.to,"Kirim contact")
+                kk.sendText(msg.to,"Kirim contact")
+                kc.sendText(msg.to,"Kirim contact")
+            elif msg.text in ["Unban"]:
+              if msg.from_ in owner:
+                wait["dblacklist"] = True
+                cl.sendText(msg.to,"Kirim contact")
+                ki.sendText(msg.to,"Kirim contact")
+                kk.sendText(msg.to,"Kirim contact")
+                kc.sendText(msg.to,"Kirim contact")
+      #-------------Fungsi Banned Send Contact Finish------------------#
+            elif msg.text in ["Creator"]:
+              msg.contentType = 13
+              msg.contentMetadata = {'mid': 'u31ef22df7f538df1d74dc7f756ef1a32'}
+              cl.sendText(msg.to,"======================")
+              cl.sendMessage(msg)
+              cl.sendText(msg.to,"======================")
+              cl.sendText(msg.to,"Itu Creator Kami Yang Manis 😜")
+                
+      #-------------Fungsi Chat ----------------
+            elif msg.text in ["Woy"]:
+                 quote = ['Istri yang baik itu Istri yang Mengizinkan Suaminya untuk Poligami 😂😂😂.','Kunci Untuk Bikin Suami Bahagia itu cuma satu..\nIzinkan Suamimu Untuk Selingkuh Coyyy ','Ah Kupret Lu','Muka Lu Kaya jembut','Ada Orang kah disini?','Sange Euy','Ada Perawan Nganggur ga Coy?','Ada Janda Nganggur ga ya ,yg bisa di ajak mojok?']
+                 psn = random.choice(quote)
+                 cl.sendText(msg.to,psn)
+            
+      #-------------Fungsi Bannlist Start------------------#          
+            elif msg.text in ["Banlist"]:
+              if msg.from_ in admin:
+                if wait["blacklist"] == {}:
+                    random.choice(KAC).sendText(msg.to,"Tidak Ada Akun Terbanned")
+                else:
+                    random.choice(KAC).sendText(msg.to,"Blacklist user")
+                    mc = ""
+                    for mi_d in wait["blacklist"]:
+                        mc += "->" +cl.getContact(mi_d).displayName + "\n"
+                    cl.sendText(msg.to,mc)
+    #-------------Fungsi Bannlist Finish------------------#  
+      
+            elif msg.text in ["Cek ban"]:
+              if msg.from_ in admin:
