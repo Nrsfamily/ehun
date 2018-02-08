@@ -3539,3 +3539,34 @@ def nameUpdate():
                 profile5 = ks.getProfile()
                 profile5.displayName = wait["cName5"]
                 ks.updateProfile(profile5a)
+
+                profile6 = ka.getProfile()
+                profile6.displayName = wait["cName6"]
+                ka.updateProfile(profile6)
+
+                profile7 = kb.getProfile()
+                profile7.displayName = wait["cName7"]
+                kb.updateProfile(profile7)
+
+                profile8 = ko.getProfile()
+                profile8.displayName = wait["cName8"]
+                ko.updateProfile(profile8)
+                
+                profile9 = ke.getProfile()
+                profile9.displayName = wait["cName9"]
+                ke.updateProfile(profile9)
+                
+                profile10 = ku.getProfile()
+                profile10.displayName = wait["cName10"]
+                ku.updateProfile(profile10)
+                
+                profile11 = satpam.getProfile()
+                profile11.displayName = wait["cName11"]
+                satpam.updateProfile(profile11)
+                
+                profile12 = k1.getProfile()
+                profile12.displayName = wait["cName12"]
+                k1.updateProfile(profile12)
+            time.sleep(600)
+        except:
+            pass
