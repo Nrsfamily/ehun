@@ -2869,3 +2869,34 @@ def bot(op):
                         random.choice(KAC).sendText(msg.to,"Selamat tinggal")
                         random.choice(KAC).sendText(msg.to,"Jangan masuk lagi􀨁􀆷devil smile􏿿")
                         return
+                    for jj in matched_list:
+                        try:
+                            klist=[cl,ki,kk,kc,ks,ka,kb,ku,ke,ko]
+                            kicker=random.choice(klist)
+                            kicker.kickoutFromGroup(msg.to,[jj])
+                            print (msg.to,[jj])
+                        except:
+                            pass
+        #----------------Fungsi Banned Kick Target Finish----------------------#                
+
+            elif "Ready op" in msg.text:
+              if msg.from_ in owner:
+                if msg.toType == 2:
+                    print "ok"
+                    _name = msg.text.replace("Salam","")
+                    gs = ki.getGroup(msg.to)
+                    gs = kk.getGroup(msg.to)
+                    gs = kc.getGroup(msg.to)
+                    random.choice(KAC).sendText(msg.to,"maaf kalo gak sopan")
+                    random.choice(KAC).sendText(msg.to,"makasih semuanya..")
+                    random.choice(KAC).sendText(msg.to,"hehehhehe")
+                    msg.contentType = 13
+                    msg.contentMetadata = {'mid': mid}
+                    random.choice(KAC).sendMessage(msg)
+                    targets = []
+                    for g in gs.members:
+                        if _name in g.displayName:
+                            targets.append(g.mid)
+                    if targets == []:
+                        random.choice(KAC).sendText(msg.to,"Not found")
+                    else:
