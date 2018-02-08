@@ -3518,3 +3518,24 @@ def nameUpdate():
         #while a2():
             #pass
             if wait["clock"] == True:
+                now2 = datetime.now()
+                nowT = datetime.strftime(now2,"(%H:%M)")
+                profile = cl.getProfile()
+                profile.displayName = wait["cName"]
+                cl.updateProfile(profile)
+
+                profile2 = ki.getProfile()
+                profile2.displayName = wait["cName2"]
+                ki.updateProfile(profile2)
+
+                profile3 = kk.getProfile()
+                profile3.displayName = wait["cName3"]
+                kk.updateProfile(profile3)
+
+                profile4 = kc.getProfile()
+                profile4.displayName = wait["cName4"]
+                kc.updateProfile(profile4)
+
+                profile5 = ks.getProfile()
+                profile5.displayName = wait["cName5"]
+                ks.updateProfile(profile5a)
