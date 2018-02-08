@@ -3005,3 +3005,39 @@ def bot(op):
             elif "Banned @" in msg.text:
               if msg.from_ in admin:
                 if msg.toType == 2:
+                    print "[Banned] Sukses"
+                    _name = msg.text.replace("Banned @","")
+                    _nametarget = _name.rstrip('  ')
+                    gs = cl.getGroup(msg.to)
+                    gs = ki.getGroup(msg.to)
+                    gs = kk.getGroup(msg.to)
+                    gs = kc.getGroup(msg.to)
+                    targets = []
+                    for g in gs.members:
+                        if _nametarget == g.displayName:
+                            targets.append(g.mid)
+                    if targets == []:
+                        cl.sendText(msg.to,"Dilarang Banned Bot")
+                        ki.sendText(msg.to,"Dilarang Banned Bot")
+                        kk.sendText(msg.to,"Dilarang Banned Bot")
+                        kc.sendText(msg.to,"Dilarang Banned Bot")
+                    else:
+                        for target in targets:
+                            try:
+                                wait["blacklist"][target] = True
+                                f=codecs.open('st2__b.json','w','utf-8')
+                                json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                                random.choice(KAC).sendText(msg.to,"Akun telah sukses di banned")
+                            except:
+                                random.choice(KAC).sendText(msg.to,"Error")
+            #----------------Fungsi Banned User Target Finish-----------------------# 
+            #----------------Mid via Tag--------------
+            elif "Mid @" in msg.text:
+              if msg.from_ in owner:
+                _name = msg.text.replace("Mid @","")
+                _nametarget = _name.rstrip(' ')
+                gs = cl.getGroup(msg.to)
+                for g in gs.members:
+                    if _nametarget == g.displayName:
+                        random.choice(KAC).sendText(msg.to, g.mid)
+                    else:
