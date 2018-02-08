@@ -3180,3 +3180,45 @@ def bot(op):
        
             elif msg.text in ["LG"]: #Melihat List Group
               if msg.from_ in admin:
+                 gids = cl.getGroupIdsJoined()
+                 h = ""
+                 for i in gids:
+                  #####gn = cl.getGroup(i).name
+                  h += "[•]%s Member\n" % (cl.getGroup(i).name   +"👉"+str(len(cl.getGroup(i).members)))
+                 cl.sendText(msg.to,"=======[List Group]======\n"+ h +"Total Group :"+str(len(gids)))
+                
+            elif msg.text in ["LG2"]: #Melihat List Group + ID Groupnya (Gunanya Untuk Perintah InviteMeTo:)
+              if msg.from_ in owner:
+                gid = cl.getGroupIdsJoined()
+                h = ""
+                for i in gid:
+                    h += "[%s]:%s\n" % (cl.getGroup(i).name,i)
+                cl.sendText(msg.to,h)
+      #--------------List Group------------
+       #------------ Keluar Dari Semua Group------
+            elif msg.text in ["Bot out","Op bye"]: # Keluar Dari Semua Group Yang Di dalem nya  ada bot(Kalo Bot Kalian Nyangkut di Group lain :D)
+              if msg.from_ in owner:
+                 gid = cl.getGroupIdsJoined()
+                 gid = ki.getGroupIdsJoined()
+                 gid = kk.getGroupIdsJoined()
+                 gid = kc.getGroupIdsJoined()
+                 gid = ks.getGroupIdsJoined()
+                 gid = ka.getGroupIdsJoined()
+                 gid = kb.getGroupIdsJoined()
+                 gid = ko.getGroupIdsJoined()
+                 gid = ke.getGroupIdsJoined()
+                 gid = ku.getGroupIdsJoined()
+                 for i in gid:
+                   ku.leaveGroup(i)
+                   ke.leaveGroup(i)
+                   ko.leaveGroup(i)
+                   kb.leaveGroup(i)
+                   ka.leaveGroup(i)
+                   ks.leaveGroup(i)
+                   kc.leaveGroup(i)
+                   ki.leaveGroup(i)
+                   kk.leaveGroup(i)
+                   cl.leaveGroup(i)
+                 if wait["lang"] == "JP":
+                   cl.sendText(msg.to,"Sayonara")
+                 else:
