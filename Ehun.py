@@ -3222,3 +3222,42 @@ def bot(op):
                  if wait["lang"] == "JP":
                    cl.sendText(msg.to,"Sayonara")
                  else:
+                   cl.sendText(msg.to,"He declined all invitations")
+ #------------------------End---------------------
+
+ #-----------------End-----------
+            elif msg.text in ["Op katakan hai"]:
+                ki.sendText(msg.to,"Hai My Family 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"Hai My Family 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"Hai My Family 􀜁􀅔Har Har􏿿")
+
+#-----------------------------------------------
+            elif msg.text in ["Cv say hinata pekok"]:
+                ki.sendText(msg.to,"Hinata pekok 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"Hinata pekok 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"Hinata pekok 􀜁􀅔Har Har􏿿")
+            elif msg.text in ["Cv say didik pekok"]:
+                ki.sendText(msg.to,"Didik pekok 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"Didik pekok 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"Didik pekok 􀜁􀅔Har Har􏿿")
+            elif msg.text in ["Cv say bobo ah","Bobo dulu ah"]:
+                ki.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
+            elif msg.text in ["Cv say chomel pekok"]:
+                ki.sendText(msg.to,"Chomel pekok 􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"Chomel pekok 􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"Chomel pekok 􀜁􀅔Har Har􏿿")
+            elif msg.text in ["#welcome"]:
+                ki.sendText(msg.to,"Selamat datang di Group Kami")
+                kk.sendText(msg.to,"Jangan nakal ok!")
+#-----------------------------------------------
+            elif msg.text in ["PING","Ping","ping"]:
+                ki.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+                kk.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+                kc.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+#-----------------------------------------------
+
+       #-------------Fungsi Respon Start---------------------#
+            elif msg.text in ["Absen","Absen bot","Absen dulu","Respon"]:
+              if msg.from_ in admin:
