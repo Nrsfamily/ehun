@@ -3261,3 +3261,35 @@ def bot(op):
        #-------------Fungsi Respon Start---------------------#
             elif msg.text in ["Absen","Absen bot","Absen dulu","Respon"]:
               if msg.from_ in admin:
+                cl.sendText(msg.to,"⭐⭐⭐")
+                ki.sendText(msg.to,"⭐⭐⭐⭐")
+                kk.sendText(msg.to,"⭐⭐⭐⭐⭐")
+                kc.sendText(msg.to,"⭐⭐⭐⭐⭐⭐")
+                ks.sendText(msg.to,"⭐⭐⭐⭐⭐⭐⭐")
+                ka.sendText(msg.to,"⭐⭐⭐⭐⭐⭐⭐⭐")
+                kb.sendText(msg.to,"⭐⭐⭐⭐⭐⭐⭐⭐⭐")
+                ko.sendText(msg.to,"⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐")
+                ke.sendText(msg.to,"⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐")
+                ku.sendText(msg.to,"⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐")
+                cl.sendText(msg.to,"Semua Udah Hadir Boss\nSiap Protect Group\nAman Gak Aman Yang Penting Anu")
+      #-------------Fungsi Respon Finish---------------------#
+                            
+
+      #-------------Fungsi Balesan Respon Start---------------------#
+            elif msg.text in ["Ini Apa","ini apa","Apaan Ini","apaan ini"]:
+                ki.sendText(msg.to,"Ya gitu deh intinya mah 􀨁􀅴questioning􏿿")
+
+      #-------------Fungsi Balesan Respon Finish---------------------#
+
+       #-------------Fungsi Speedbot Start---------------------#
+            elif msg.text in ["Speed","Sp"]:
+              if msg.from_ in admin and owner:
+                start = time.time()
+                cl.sendText(msg.to, "")
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sDetik" % (elapsed_time))
+      #-------------Fungsi Speedbot Finish---------------------#
+
+      #-------------Fungsi Banned Send Contact Start------------------#
+            elif msg.text in ["Ban"]:
+              if msg.from_ in owner:
