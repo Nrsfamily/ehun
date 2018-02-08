@@ -3410,3 +3410,43 @@ def bot(op):
                     try:
                         cl.sendText(msg.to,str(e))
                     except:
+                        pass
+#---------CCTV-----------
+        if op.type == 55:
+          try:
+            if op.param1 in wait2['readPoint']:
+              Name = cl.getContact(op.param2).displayName
+              if Name in wait2['readMember'][op.param1]:
+                 pass
+              else:
+                wait2['readMember'][op.param1] += "\n[•]" + Name
+                wait2['ROM'][op.param1][op.param2] = "[•]" + Name
+            else:
+              cl.sendText
+          except:
+             pass
+#---------------------
+        if op.type == 17:
+           if op.param2 in Bots:
+              return
+           ginfo = cl.getGroup(op.param1)
+           random.choice(KAC).sendText(op.param1, "ترحيبSelamat Datang Di  " + str(ginfo.name))
+           random.choice(KAC).sendText(op.param1, "Owner Bot Krisna, Owner صاحبRoom: " + str(ginfo.name) + " :\n" + ginfo.creator.displayName)
+           random.choice(KAC).sendText(op.param1, "Budayakan Baca Note !!! yah Ka 😊بودياكان باكا ملاحظة !!! ياه كا 😊\nJangan Baper & Jangan Nakal ya KK\nSemoga Betah Kk 😘لا بابر و لا يكون محظوظا نعم ككنأمل بيتاه كك 😘")
+           print "MEMBER HAS JOIN THE GROUP"
+        if op.type == 15:
+           if op.param2 in Bots:
+              return
+           random.choice(KAC).sendText(op.param1, "Baper Tuh Orang :v\nحسنا انه خارج، بابر انها الناس ")
+           print "MEMBER HAS LEFT THE GROUP"
+#------------------------
+        if op.type == 59:
+            print op
+
+
+    except Exception as error:
+        print error
+
+
+def a2():
+    now2 = datetime.now()
