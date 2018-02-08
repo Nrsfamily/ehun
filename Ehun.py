@@ -3145,3 +3145,38 @@ def bot(op):
        #--------------Fungsi Broadcast Finish-----------#
        #--------------------Start-----------------------#       
             elif "Apakah " in msg.text:
+                tanya = msg.text.replace("Apakah ","")
+                jawab = ("Ya","Tidak","Bisa Jadi","Jangan berharap")
+                jawaban = random.choice(jawab)
+                cl.sendText(msg.to,jawaban)		
+            elif "Berapa besar cinta " in msg.text:
+                tanya = msg.text.replace("Berapa besar cinta ","")
+                jawab = ("0%","25%","50%","75%","100%")
+                jawaban = random.choice(jawab)
+                cl.sendText(msg.to,jawaban)                
+            elif "Siapakah cewek " in msg.text:
+                tanya = msg.text.replace("Siapakah cewek ","")
+                jawab = ("Maryati􀜁�","Ida􀜁�","Uke􀜁�","Alyn􀜁�","Ikka􀜁�","Yunikey􀜁�","Qwenie􀜁�","Gendis􀜁�","Aryani􀜁�","Nindy􀜁�","Wina􀜁�","Dewi􀜁�","Ifah􀜁�")
+                jawaban = random.choice(jawab)
+                cl.sendText(msg.to,jawaban)
+                cl.sendText(msg.to,jawaban)
+            elif "Siapakah cowok " in msg.text:
+                tanya = msg.text.replace("Siapakah cowok ","")
+                jawab = ("Arjun􀜁�","Ahmad khan􀜁�","Hajir􀜁�","Dd􀜁�","Indra􀜁�","Jeong􀜁�","Yogi􀜁�","Ary􀜁�","Ucil􀜁�")
+                jawaban = random.choice(jawab)
+                cl.sendText(msg.to,jawaban)
+                cl.sendText(msg.to,jawaban)  
+            elif "Adakah " in msg.text:
+                tanya = msg.text.replace("Adakah ","")
+                jawab = ("Tidak tahu.","Ada.","Tidak ada.","Mungkin ada")
+                jawaban = random.choice(jawab)
+                cl.sendText(msg.to,jawaban)
+            elif "Cakepkah " in msg.text:
+                tanya = msg.text.replace("Cakepkah ","")
+                jawab = ("Jelek.","Cakep.","Lumayan.","Kaya jembut.")
+                jawaban = random.choice(jawab)
+                cl.sendText(msg.to,jawaban)
+       #-------------------Finish-----------------------#
+       
+            elif msg.text in ["LG"]: #Melihat List Group
+              if msg.from_ in admin:
