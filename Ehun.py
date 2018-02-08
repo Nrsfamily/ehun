@@ -3041,3 +3041,39 @@ def bot(op):
                     if _nametarget == g.displayName:
                         random.choice(KAC).sendText(msg.to, g.mid)
                     else:
+                        pass
+            #-----------------------------------------
+            #----------------Fungsi Unbanned User Target Start-----------------------#
+            elif "Unban @" in msg.text:
+              if msg.from_ in admin:
+                if msg.toType == 2:
+                    print "[Unban] Sukses"
+                    _name = msg.text.replace("Unban @","")
+                    _nametarget = _name.rstrip('  ')
+                    gs = cl.getGroup(msg.to)
+                    gs = ki.getGroup(msg.to)
+                    gs = kk.getGroup(msg.to)
+                    gs = kc.getGroup(msg.to)
+                    targets = []
+                    for g in gs.members:
+                        if _nametarget == g.displayName:
+                            targets.append(g.mid)
+                    if targets == []:
+                        cl.sendText(msg.to,"Tidak Ditemukan.....")
+                        ki.sendText(msg.to,"Tidak Ditemukan.....")
+                        kk.sendText(msg.to,"Tidak Ditemukan.....")
+                        kc.sendText(msg.to,"Tidak Ditemukan.....")
+                    else:
+                        for target in targets:
+                            try:
+                                del wait["blacklist"][target]
+                                f=codecs.open('st2__b.json','w','utf-8')
+                                json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                                cl.sendText(msg.to,"Akun Bersih Kembali")
+                            except:
+                                ki.sendText(msg.to,"Error")
+          #----------------Fungsi Unbanned User Target Finish-----------------------#
+           
+        #-------------Fungsi Spam Start---------------------#
+            elif msg.text in ["up"]:
+              if msg.from_ in admin:
