@@ -3370,3 +3370,43 @@ def bot(op):
                     random.choice(KAC).sendText(msg.to,"Blacklist emang pantas tuk di usir")
             elif msg.text in ["Clear"]:
               if msg.from_ in admin:
+                if msg.toType == 2:
+                    group = cl.getGroup(msg.to)
+                    gMembMids = [contact.mid for contact in group.invitee]
+                    for _mid in gMembMids:
+                        cl.cancelGroupInvitation(msg.to,[_mid])
+                    cl.sendText(msg.to,"I pretended to cancel and canceled.")
+            elif "random: " in msg.text:
+              if msg.from_ in admin:
+                if msg.toType == 2:
+                    strnum = msg.text.replace("random: ","")
+                    source_str = 'abcdefghijklmnopqrstuvwxyz1234567890@:;./_][!&%$#)(=~^|'
+                    try:
+                        num = int(strnum)
+                        group = cl.getGroup(msg.to)
+                        for var in range(0,num):
+                            name = "".join([random.choice(source_str) for x in xrange(10)])
+                            time.sleep(0.01)
+                            group.name = name
+                            cl.updateGroup(group)
+                    except:
+                        cl.sendText(msg.to,"Error")
+            elif "albumat'" in msg.text:
+                try:
+                    albumtags = msg.text.replace("albumat'","")
+                    gid = albumtags[:6]
+                    name = albumtags.replace(albumtags[:34],"")
+                    cl.createAlbum(gid,name)
+                    cl.sendText(msg.to,name + "created an album")
+                except:
+                    cl.sendText(msg.to,"Error")
+            elif "fakecat'" in msg.text:
+                try:
+                    source_str = 'abcdefghijklmnopqrstuvwxyz1234567890@:;./_][!&%$#)(=~^|'
+                    name = "".join([random.choice(source_str) for x in xrange(10)])
+                    anu = msg.text.replace("fakecat'","")
+                    cl.sendText(msg.to,str(cl.channel.createAlbum(msg.to,name,anu)))
+                except Exception as e:
+                    try:
+                        cl.sendText(msg.to,str(e))
+                    except:
