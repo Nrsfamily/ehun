@@ -6,12 +6,12 @@ import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
 satpam = LINETCR.LINE() # Login Pake Akun Kicker Kalian
 #satpam.login(qr=True)
-satpam.login(token="")
+satpam.login(token="EpvLM9KYoaD5XjWfC2J5.RdiQlB/fD7H0LkdM1ueLjq.MzxMMtq3gVJeJFM4AW83AlORKeZMGbvwRTaR+0HNCQA=")
 satpam.loginResult()
 
 cl = LINETCR.LINE() #Luffy
 #cl.login(qr=True)
-cl.login(token="EpWYYMjmEWUba52UlKA1.8nezDhK7HGW9hVtLK4qvGq.4AyYmATuAvCztvMdCZ5xnyhRST1FUx3coUoPztOJtEw=")
+cl.login(token="EpvLM9KYoaD5XjWfC2J5.RdiQlB/fD7H0LkdM1ueLjq.MzxMMtq3gVJeJFM4AW83AlORKeZMGbvwRTaR+0HNCQA=")
 cl.loginResult()
 
 ki = LINETCR.LINE() #Zorro
